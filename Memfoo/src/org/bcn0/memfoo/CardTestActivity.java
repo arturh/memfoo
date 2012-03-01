@@ -100,10 +100,15 @@ public class CardTestActivity extends Activity {
 		} else {
 			this.current = db.nextNew();
 		}
-		
-		tvKanji.setText(current.kanji);
-		btnKana.setText("\u25B7 " + current.kana);
-		tvMeaning.setText(current.meaning);
+		if (current.kanji.equals("")) {
+			tvKanji.setText(current.kana);
+			btnKana.setText("\u25B7 " + current.kana);
+			tvMeaning.setText(current.meaning);
+		} else {
+			tvKanji.setText(current.kanji);
+			btnKana.setText("\u25B7 " + current.kana);
+			tvMeaning.setText(current.meaning);
+		}
 
 		showFront(null);
 
@@ -111,10 +116,11 @@ public class CardTestActivity extends Activity {
 
 	public void playKana(View v) {
 		try {
-		Uri uri = Uri.parse("android.resource://org.bcn0.memfoo/raw/" + this.current.audio);
-		MediaPlayer mp = MediaPlayer.create(this, uri);
-		mp.start();
-		} catch (Exception e){
+			Uri uri = Uri.parse("android.resource://org.bcn0.memfoo/raw/"
+					+ this.current.audio);
+			MediaPlayer mp = MediaPlayer.create(this, uri);
+			mp.start();
+		} catch (Exception e) {
 			Log.i("MemFoo", e.toString());
 		}
 	}
