@@ -4,37 +4,49 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <LinearLayout
-        android:id="@+id/linearLayout1"
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="10"
-        android:orientation="vertical" >
+        android:layout_weight="10" >
 
-        <WebView
-            android:id="@+id/wvFront"
+        <TextView
+            android:id="@+id/tvKanji"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="10"
-            android:minHeight="200dp" />
-
-        <WebView
-            android:id="@+id/wvBack"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="10"
-            android:minHeight="200dp"
-            android:visibility="gone" />
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:height="50pt"
+            android:padding="10px"
+            android:text="かんじ"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="48sp" />
 
         <Button
-            android:id="@+id/btnPlay"
-            android:layout_width="match_parent"
-            android:layout_height=".5in"
-            android:text="Play"
-            android:onClick="playSound"
-            android:visibility="gone"
-            />
-    </LinearLayout>
+            android:id="@+id/btnKana"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tvKanji"
+            android:minWidth="150sp"
+            android:onClick="playKana"
+            android:padding="15sp"
+            android:text="かなおんがく"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvMeaning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/btnKana"
+            android:paddingTop="12sp"
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </RelativeLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout2"

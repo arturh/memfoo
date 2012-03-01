@@ -25,6 +25,9 @@ public class CardTestActivity extends Activity {
 	Button btnPlay;
 	private MySQLiteOpenHelper db;
 	private Card current;
+	private TextView tvKanji;
+	private Button btnKana;
+	private TextView tvMeaning;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -33,11 +36,10 @@ public class CardTestActivity extends Activity {
 
 		showAnswerLayout = (LinearLayout) findViewById(R.id.showAnswerLayout);
 		answerButtonsLayout = (LinearLayout) findViewById(R.id.answerButtonsLayout);
-
-		wvFront = (WebView) findViewById(R.id.wvFront);
-		wvBack = (WebView) findViewById(R.id.wvBack);
 		
-		btnPlay = (Button)findViewById(R.id.btnPlay);
+		tvKanji = (TextView) findViewById(R.id.tvKanji);
+		btnKana = (Button) findViewById(R.id.btnKana);
+		tvMeaning = (TextView) findViewById(R.id.tvMeaning);
 
 		db = new MySQLiteOpenHelper(this);
 		try {
@@ -52,21 +54,33 @@ public class CardTestActivity extends Activity {
 	}
 
 	public void showBack(View v) {
-		wvBack.setVisibility(View.VISIBLE);
+		btnKana.setVisibility(View.VISIBLE);
+		tvMeaning.setVisibility(View.VISIBLE);
+		
 		showAnswerLayout.setVisibility(View.GONE);
 		answerButtonsLayout.setVisibility(View.VISIBLE);
-		btnPlay.setVisibility(View.VISIBLE);
 	}
 
 	public void showFront(View v) {
-		wvBack.setVisibility(View.GONE);
+		btnKana.setVisibility(View.GONE);
+		tvMeaning.setVisibility(View.GONE);
+		
 		showAnswerLayout.setVisibility(View.VISIBLE);
 		answerButtonsLayout.setVisibility(View.GONE);
-		btnPlay.setVisibility(View.GONE);
 	}
 
 	public void rememberCard(View v) {
 		db.rememberedCard(current);
+		
+//		try {
+//		Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+//		long[] pattern = {0, 50, 50};
+//		vibrator.vibrate(pattern, current.correct + 1);
+//		
+//		} catch (Exception e) {
+//			Log.i("MEMFOO", e.toString());
+//		}
+		
 		loadNext();
 	}
 
@@ -86,25 +100,16 @@ public class CardTestActivity extends Activity {
 		} else {
 			this.current = db.nextNew();
 		}
-
-		String front, back;
-
-		if (current.kanji != null && current.kanji.length() > 0) {
-			front = "<center><font size=10>" + current.kanji;
-			back =  "<font size=3>"  + current.kana + "<br/>" + current.meaning;
-		} else {
-			front = "<center><font size=10>" + current.kana;
-			back = "<font size=3>" + current.meaning;
-		}
-
-		wvFront.loadDataWithBaseURL(null, front, "text/html", "UTF-8", null);
-		wvBack.loadDataWithBaseURL(null, back, "text/html", "UTF-8", null);
+		
+		tvKanji.setText(current.kanji);
+		btnKana.setText("\u25B7 " + current.kana);
+		tvMeaning.setText(current.meaning);
 
 		showFront(null);
 
 	}
 
-	public void playSound(View v) {
+	public void playKana(View v) {
 		try {
 		Uri uri = Uri.parse("android.resource://org.bcn0.memfoo/raw/" + this.current.audio);
 		MediaPlayer mp = MediaPlayer.create(this, uri);

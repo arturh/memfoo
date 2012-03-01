@@ -5,7 +5,8 @@
     android:versionName="1.0" >
 
     <uses-sdk android:minSdkVersion="8" />
-    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:icon="@drawable/noun_project_987"
@@ -20,7 +21,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CardTestActivity" />
+        <activity
+            android:name=".CardTestActivity"
+            android:screenOrientation="portrait" />
         <activity android:name=".CardGraphActivity" />
     </application>
 
