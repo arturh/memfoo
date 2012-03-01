@@ -25,6 +25,7 @@
             android:name=".CardTestActivity"
             android:screenOrientation="portrait" />
         <activity android:name=".CardGraphActivity" />
+        <activity android:name=".CardListActivity" />
     </application>
 
 </manifest>

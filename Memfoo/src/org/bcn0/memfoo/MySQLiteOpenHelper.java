@@ -22,14 +22,14 @@ public final class MySQLiteOpenHelper extends SQLiteOpenHelper {
 	private static final String DB_NAME = "jlpt4.sqlite";
 	
 	// Column names
-	private static final String ID = "_id";
-	private static final String KANJI = "kanji";
-	private static final String KANA = "kana";
-	private static final String MEANING = "meaning";
-	private static final String AUDIO = "audio";
-	private static final String DUE = "due";
-	private static final String INTRODUCED = "introduced";
-	private static final String CORRECT = "correct";
+	static final String ID = "_id";
+	static final String KANJI = "kanji";
+	static final String KANA = "kana";
+	static final String MEANING = "meaning";
+	static final String AUDIO = "audio";
+	static final String DUE = "due";
+	static final String INTRODUCED = "introduced";
+	static final String CORRECT = "correct";
 	
 	private static final String[] CARDS_TABLE_COLUMNS = {ID, KANJI, KANA, MEANING, AUDIO, DUE, INTRODUCED, CORRECT};
 	
@@ -215,6 +215,10 @@ public final class MySQLiteOpenHelper extends SQLiteOpenHelper {
 		values.put(DUE, (new Date()).getTime() + 30 * 1000);
 		db.update(
 			CARDS_TABLE, values, "_id = " + Integer.toString(c._id), null);
+	}
+
+	public Cursor getCardsCursor() {
+		return db.query(CARDS_TABLE, CARDS_TABLE_COLUMNS, null, null, null, null, ID);
 	}
 	
 	
