@@ -203,8 +203,8 @@ public final class MySQLiteOpenHelper extends SQLiteOpenHelper {
 	public void rememberedCard(Card c) {
 		ContentValues values = new ContentValues();
 		values.put(CORRECT, c.correct + 1);
-		values.put(DUE,	
-			(new Date()).getTime() + Math.exp(c.correct + 1) * 30 * 1000);
+		values.put(DUE,	 // Cards show up often due to demostration purposes. Adjust.
+			(new Date()).getTime() + Math.exp(c.correct + 1) * 30 * 1000); 
 		db.update(
 			CARDS_TABLE, values, "_id = " + Integer.toString(c._id), null);
 	}
@@ -221,5 +221,18 @@ public final class MySQLiteOpenHelper extends SQLiteOpenHelper {
 		return db.query(CARDS_TABLE, CARDS_TABLE_COLUMNS, null, null, null, null, ID);
 	}
 	
+	public int[] correctTally(){
+		Cursor c = db.query(CARDS_TABLE, new String[] {CORRECT, "COUNT(*)"},
+				INTRODUCED + " != ''", null,
+				CORRECT, null, null);
+		int[] result = new int[15];
+		while (c.moveToNext()) {
+			int correct = c.getInt(0);
+			int count = c.getInt(1);
+			result[correct] = count;
+		}
+		c.close();
+		return result;
+	}
 	
 }

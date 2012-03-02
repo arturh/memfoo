@@ -1,5 +1,7 @@
 package org.bcn0.memfoo;
 
+import java.util.Arrays;
+
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.LinearGradient;
@@ -46,32 +48,34 @@ public class CardGraph extends View {
 			paint.setColor(Color.MAGENTA);
 		}
 		
-		final int NUMBER_BARS = 3;
 		final int MAX_HEIGHT = getMeasuredHeight();
-		final int BAR_WIDTH  = getMeasuredWidth()/NUMBER_BARS;
+		final int BAR_WIDTH  = getMeasuredWidth()/data.length;
 		final int MARGIN = 20;
-		final int MAX_VALUE = 100;
+		final int[] SORTED_DATA = (int[]) data.clone();
+		Arrays.sort(SORTED_DATA);
+		final int MAX_VALUE = SORTED_DATA[SORTED_DATA.length - 1];
 		
-		final double v1 = 10., v2 = 20., v3 = 40.;
-		
-		LinearGradient lg = new LinearGradient(0, MAX_HEIGHT/2, 0, MAX_HEIGHT, Color.RED, Color.GREEN, Shader.TileMode.CLAMP);
+		LinearGradient lg = new LinearGradient(
+				0, MAX_HEIGHT/2, 0, MAX_HEIGHT,
+				Color.RED, Color.GREEN, Shader.TileMode.CLAMP);
 		paint.setShader(lg);
 		
-		for (int i = 0; i < NUMBER_BARS; ++i) {
-			canvas.drawRect(i*BAR_WIDTH + MARGIN,
-							(float) (MAX_HEIGHT - v1/MAX_VALUE*MAX_HEIGHT),
-							BAR_WIDTH - MARGIN,
-							MAX_HEIGHT,
-							paint);
+		for (int i=0; i<data.length; ++i) {
+			int y = data[i] * MAX_VALUE/MAX_HEIGHT;
+			canvas.drawRect(
+				i * BAR_WIDTH, MAX_HEIGHT - y,
+				(i + 1) * BAR_WIDTH, MAX_HEIGHT,
+				paint);
 		}
 		
-		canvas.drawRect(MARGIN, (float) (MAX_HEIGHT - v1/MAX_VALUE*MAX_HEIGHT), BAR_WIDTH - MARGIN, MAX_HEIGHT, paint);
-		canvas.drawRect(BAR_WIDTH + MARGIN, (float) (MAX_HEIGHT - v2/MAX_VALUE*MAX_HEIGHT), 2*BAR_WIDTH - MARGIN, MAX_HEIGHT, paint);
-		canvas.drawRect(2*BAR_WIDTH + MARGIN, (float) (MAX_HEIGHT - v3/MAX_VALUE*MAX_HEIGHT), 3*BAR_WIDTH - MARGIN, MAX_HEIGHT, paint);
-		
-		paint.setTextSize(30);
-		paint.setColor(Color.CYAN);
-		canvas.drawText("foo", 0, 100, paint);
+//		paint.setTextSize(30);
+//		paint.setColor(Color.CYAN);
+//		canvas.drawText("foo", 0, 100, paint);
+	}
+
+	public void setData(int[] data) {
+		this.data = data;
+		this.invalidate();
 	}
 	
 

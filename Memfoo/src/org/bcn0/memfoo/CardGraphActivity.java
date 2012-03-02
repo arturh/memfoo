@@ -1,5 +1,7 @@
 package org.bcn0.memfoo;
 
+import java.io.IOException;
+
 import android.app.Activity;
 import android.os.Bundle;
 
@@ -7,10 +9,23 @@ public class CardGraphActivity extends Activity {
 	/**
 	 * @see android.app.Activity#onCreate(Bundle)
 	 */
+	MySQLiteOpenHelper msoh;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.cardgraph);
+		CardGraph cg = (CardGraph)findViewById(R.id.cardGraph1);
+		msoh = new MySQLiteOpenHelper(this);
+		try {
+			msoh.createDataBase();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			finish();
+		}
+		msoh.openDataBase();
+		cg.setData(msoh.correctTally());
+		msoh.close();
 	}
 
 	/**
