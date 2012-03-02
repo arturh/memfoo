@@ -60,12 +60,22 @@ public class CardGraph extends View {
 				Color.RED, Color.GREEN, Shader.TileMode.CLAMP);
 		paint.setShader(lg);
 		
+		Paint paint2 = new Paint();
+		paint2.setColor(Color.WHITE);
+		paint2.setAlpha(100);
+		paint2.setTextSize(30);
+		
+		for (int i=0; i < MAX_VALUE * 1.1; i += 10) {
+			canvas.drawText(Integer.toString(i), 0, MAX_HEIGHT - i / MAX_VALUE * MAX_HEIGHT, paint2);
+		}
+		
 		for (int i=0; i<data.length; ++i) {
 			int y = data[i] * MAX_VALUE/MAX_HEIGHT;
 			canvas.drawRect(
 				i * BAR_WIDTH, MAX_HEIGHT - y,
 				(i + 1) * BAR_WIDTH, MAX_HEIGHT,
 				paint);
+			canvas.drawText(Integer.toString(i), i * BAR_WIDTH, MAX_HEIGHT, paint2);
 		}
 		
 //		paint.setTextSize(30);

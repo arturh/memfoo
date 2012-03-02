@@ -36,7 +36,7 @@ public class CardTestActivity extends Activity implements OnCompletionListener {
 	private TextView tvMeaning;
 
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+	protected void onCreate(Bundle savedInstanceState) { 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.cardtest);
 

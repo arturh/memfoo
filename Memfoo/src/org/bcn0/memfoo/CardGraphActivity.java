@@ -19,7 +19,6 @@ public class CardGraphActivity extends Activity {
 		try {
 			msoh.createDataBase();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			finish();
 		}
