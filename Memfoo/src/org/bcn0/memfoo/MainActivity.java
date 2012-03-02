@@ -30,6 +30,10 @@ public class MainActivity extends Activity {
 		startActivity(new Intent(this, CardListActivity.class));
 	}
 	
+	public void startSpeechActivity(View v) {
+		startActivity(new Intent(this, SpeechActivity.class));
+	}
+	
 	public void testSound(View v) {
 		Uri uri = Uri.parse("android.resource://org.bcn0.memfoo/raw/apa_to");
 		MediaPlayer mp = MediaPlayer.create(this, uri);

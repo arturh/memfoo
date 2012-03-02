@@ -57,6 +57,14 @@ public class CardGraph extends View {
 		LinearGradient lg = new LinearGradient(0, MAX_HEIGHT/2, 0, MAX_HEIGHT, Color.RED, Color.GREEN, Shader.TileMode.CLAMP);
 		paint.setShader(lg);
 		
+		for (int i = 0; i < NUMBER_BARS; ++i) {
+			canvas.drawRect(i*BAR_WIDTH + MARGIN,
+							(float) (MAX_HEIGHT - v1/MAX_VALUE*MAX_HEIGHT),
+							BAR_WIDTH - MARGIN,
+							MAX_HEIGHT,
+							paint);
+		}
+		
 		canvas.drawRect(MARGIN, (float) (MAX_HEIGHT - v1/MAX_VALUE*MAX_HEIGHT), BAR_WIDTH - MARGIN, MAX_HEIGHT, paint);
 		canvas.drawRect(BAR_WIDTH + MARGIN, (float) (MAX_HEIGHT - v2/MAX_VALUE*MAX_HEIGHT), 2*BAR_WIDTH - MARGIN, MAX_HEIGHT, paint);
 		canvas.drawRect(2*BAR_WIDTH + MARGIN, (float) (MAX_HEIGHT - v3/MAX_VALUE*MAX_HEIGHT), 3*BAR_WIDTH - MARGIN, MAX_HEIGHT, paint);

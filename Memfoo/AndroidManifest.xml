@@ -7,6 +7,8 @@
     <uses-sdk android:minSdkVersion="8" />
 
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:icon="@drawable/noun_project_987"
@@ -24,8 +26,11 @@
         <activity
             android:name=".CardTestActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".CardGraphActivity" />
+        <activity
+            android:name=".CardGraphActivity"
+            android:screenOrientation="landscape" />
         <activity android:name=".CardListActivity" />
+        <activity android:name=".SpeechActivity" />
     </application>
 
 </manifest>
