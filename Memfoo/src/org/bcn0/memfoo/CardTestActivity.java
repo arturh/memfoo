@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.net.Uri;
@@ -26,7 +27,7 @@ public class CardTestActivity extends Activity implements OnCompletionListener {
 	 * @see android.app.Activity#onCreate(Bundle)
 	 */
 
-	LinearLayout showAnswerLayout, answerButtonsLayout;
+	LinearLayout answerButtonsLayout;
 	WebView wvFront, wvBack;
 	Button btnPlay;
 	private MySQLiteOpenHelper db;
@@ -34,14 +35,15 @@ public class CardTestActivity extends Activity implements OnCompletionListener {
 	private TextView tvKanji;
 	private Button btnKana;
 	private TextView tvMeaning;
+	private Button btnShowAnswer;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) { 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.cardtest);
 
-		showAnswerLayout = (LinearLayout) findViewById(R.id.showAnswerLayout);
-		answerButtonsLayout = (LinearLayout) findViewById(R.id.answerButtonsLayout);
+		answerButtonsLayout = (LinearLayout) findViewById(R.id.linearLayout1);
+		btnShowAnswer = (Button)findViewById(R.id.btnShowBack);
 		
 		tvKanji = (TextView) findViewById(R.id.tvKanji);
 		btnKana = (Button) findViewById(R.id.btnKana);
@@ -63,15 +65,15 @@ public class CardTestActivity extends Activity implements OnCompletionListener {
 		btnKana.setVisibility(View.VISIBLE);
 		tvMeaning.setVisibility(View.VISIBLE);
 		
-		showAnswerLayout.setVisibility(View.GONE);
+		btnShowAnswer.setVisibility(View.GONE);
 		answerButtonsLayout.setVisibility(View.VISIBLE);
 	}
 
 	public void showFront(View v) {
 		btnKana.setVisibility(View.GONE);
 		tvMeaning.setVisibility(View.GONE);
-		
-		showAnswerLayout.setVisibility(View.VISIBLE);
+		btnShowAnswer.setVisibility(View.VISIBLE);
+
 		answerButtonsLayout.setVisibility(View.GONE);
 	}
 
@@ -191,7 +193,11 @@ public class CardTestActivity extends Activity implements OnCompletionListener {
 
 	@Override
 	public void onCompletion(MediaPlayer mp) {
-		startVoiceRecognitionActivity();
+		SharedPreferences sp = getPreferences(MODE_PRIVATE);
+		if (sp.getBoolean("DO_VOICE_RECOGNITION", false))
+			startVoiceRecognitionActivity();
+		
+		
 		
 	}
 }

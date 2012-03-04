@@ -57,16 +57,16 @@ public class CardGraph extends View {
 		
 		LinearGradient lg = new LinearGradient(
 				0, MAX_HEIGHT/2, 0, MAX_HEIGHT,
-				Color.RED, Color.GREEN, Shader.TileMode.CLAMP);
+				Color.rgb(80, 200, 80), Color.GREEN, Shader.TileMode.CLAMP);
 		paint.setShader(lg);
 		
 		Paint paint2 = new Paint();
 		paint2.setColor(Color.WHITE);
-		paint2.setAlpha(100);
+		paint2.setAlpha(180);
 		paint2.setTextSize(30);
 		
 		for (int i=0; i < MAX_VALUE * 1.1; i += 10) {
-			canvas.drawText(Integer.toString(i), 0, MAX_HEIGHT - i / MAX_VALUE * MAX_HEIGHT, paint2);
+			canvas.drawText(Integer.toString(i), 0,  i / MAX_VALUE * MAX_HEIGHT, paint2);
 		}
 		
 		for (int i=0; i<data.length; ++i) {
