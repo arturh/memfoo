@@ -13,6 +13,7 @@
     <application
         android:icon="@drawable/noun_project_987"
         android:label="@string/app_name" >
+        <uses-library android:name="com.google.android.maps" />
         <activity
             android:name="MainActivity"
             android:label="@string/app_name"
@@ -31,6 +32,7 @@
             android:screenOrientation="landscape" />
         <activity android:name=".CardListActivity" />
         <activity android:name=".SpeechActivity" />
+        <activity android:name=".MyMapActivity" />
     </application>
 
 </manifest>

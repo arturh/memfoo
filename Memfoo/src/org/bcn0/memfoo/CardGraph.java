@@ -39,8 +39,6 @@ public class CardGraph extends View {
 	protected void onDraw(android.graphics.Canvas canvas) {
 		Paint paint = new Paint();
 		paint.setARGB(255, 200, 0, 0);
-		canvas.drawLine(0, 0, 100, 100, paint);
-		canvas.drawLine(0, 100, 100, 0, paint);
 		
 		if (getMeasuredWidth() < getMeasuredHeight()) {
 			paint.setColor(Color.YELLOW);
@@ -48,8 +46,9 @@ public class CardGraph extends View {
 			paint.setColor(Color.MAGENTA);
 		}
 		
+		final int NUMBER_COLUMNS = 5;
 		final int MAX_HEIGHT = getMeasuredHeight();
-		final int BAR_WIDTH  = getMeasuredWidth()/data.length;
+		final int BAR_WIDTH  = getMeasuredWidth()/NUMBER_COLUMNS;
 		final int MARGIN = 20;
 		final int[] SORTED_DATA = (int[]) data.clone();
 		Arrays.sort(SORTED_DATA);
@@ -57,7 +56,8 @@ public class CardGraph extends View {
 		
 		LinearGradient lg = new LinearGradient(
 				0, MAX_HEIGHT/2, 0, MAX_HEIGHT,
-				Color.rgb(80, 200, 80), Color.GREEN, Shader.TileMode.CLAMP);
+				Color.rgb(160, 231, 160), Color.rgb(114, 220, 114),
+				Shader.TileMode.CLAMP);
 		paint.setShader(lg);
 		
 		Paint paint2 = new Paint();
@@ -69,18 +69,14 @@ public class CardGraph extends View {
 			canvas.drawText(Integer.toString(i), 0,  i / MAX_VALUE * MAX_HEIGHT, paint2);
 		}
 		
-		for (int i=0; i<data.length; ++i) {
+		for (int i=0; i < NUMBER_COLUMNS; ++i) {
 			int y = data[i] * MAX_VALUE/MAX_HEIGHT;
-			canvas.drawRect(
-				i * BAR_WIDTH, MAX_HEIGHT - y,
-				(i + 1) * BAR_WIDTH, MAX_HEIGHT,
-				paint);
-			canvas.drawText(Integer.toString(i), i * BAR_WIDTH, MAX_HEIGHT, paint2);
+			canvas.drawRect(i * BAR_WIDTH, MAX_HEIGHT - y,
+							(i + 1) * BAR_WIDTH, MAX_HEIGHT,
+							paint);
+			canvas.drawText(Integer.toString(i), i * BAR_WIDTH + BAR_WIDTH/2, MAX_HEIGHT, paint2);
 		}
 		
-//		paint.setTextSize(30);
-//		paint.setColor(Color.CYAN);
-//		canvas.drawText("foo", 0, 100, paint);
 	}
 
 	public void setData(int[] data) {
