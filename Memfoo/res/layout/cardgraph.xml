@@ -6,11 +6,6 @@
     android:background="@android:color/white"
     >
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/hello" />
-
     <org.bcn0.memfoo.CardGraph
         android:id="@+id/cardGraph1"
         android:layout_width="fill_parent"

@@ -20,7 +20,7 @@ public final class MySQLiteOpenHelper extends SQLiteOpenHelper {
 	private static final String CARDS_TABLE = "cards";
 	private static final String DB_PATH = "/data/data/org.bcn0.memfoo/databases/";
 	private static final String DB_NAME = "jlpt4.sqlite";
-	
+
 	// Column names
 	static final String ID = "_id";
 	static final String KANJI = "kanji";
@@ -30,10 +30,9 @@ public final class MySQLiteOpenHelper extends SQLiteOpenHelper {
 	static final String DUE = "due";
 	static final String INTRODUCED = "introduced";
 	static final String CORRECT = "correct";
-	
-	private static final String[] CARDS_TABLE_COLUMNS = {ID, KANJI, KANA, MEANING, AUDIO, DUE, INTRODUCED, CORRECT};
-	
 
+	private static final String[] CARDS_TABLE_COLUMNS = { ID, KANJI, KANA,
+			MEANING, AUDIO, DUE, INTRODUCED, CORRECT };
 
 	private Context context;
 	private SQLiteDatabase db;
@@ -64,7 +63,7 @@ public final class MySQLiteOpenHelper extends SQLiteOpenHelper {
 			}
 		}
 	}
-	
+
 	/**
 	 * Check if the database already exist to avoid re-copying the file each
 	 * time you open the application.
@@ -76,8 +75,8 @@ public final class MySQLiteOpenHelper extends SQLiteOpenHelper {
 
 		try {
 			String myPath = DB_PATH + DB_NAME;
-			checkDB = SQLiteDatabase.openDatabase(
-					myPath, null, SQLiteDatabase.OPEN_READWRITE);
+			checkDB = SQLiteDatabase.openDatabase(myPath, null,
+					SQLiteDatabase.OPEN_READWRITE);
 		} catch (SQLiteException e) {
 			// database does't exist yet.
 		}
@@ -87,7 +86,7 @@ public final class MySQLiteOpenHelper extends SQLiteOpenHelper {
 		}
 		return checkDB != null ? true : false;
 	}
-	
+
 	/**
 	 * Copies your database from your local assets-folder to the just created
 	 * empty database in the system folder, from where it can be accessed and
@@ -116,14 +115,15 @@ public final class MySQLiteOpenHelper extends SQLiteOpenHelper {
 		myOutput.close();
 		myInput.close();
 	}
-	
-    public void openDataBase() throws SQLException{
-    	 
-    	//Open the database
-        String myPath = DB_PATH + DB_NAME;
-    	db = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READWRITE);
- 
-    }
+
+	public void openDataBase() throws SQLException {
+
+		// Open the database
+		String myPath = DB_PATH + DB_NAME;
+		db = SQLiteDatabase.openDatabase(myPath, null,
+				SQLiteDatabase.OPEN_READWRITE);
+
+	}
 
 	@Override
 	public synchronized void close() {
@@ -131,8 +131,6 @@ public final class MySQLiteOpenHelper extends SQLiteOpenHelper {
 			db.close();
 		super.close();
 	}
-
-	
 
 	@Override
 	public void onCreate(SQLiteDatabase arg0) {
@@ -145,34 +143,26 @@ public final class MySQLiteOpenHelper extends SQLiteOpenHelper {
 		// TODO Auto-generated method stub
 
 	}
-	
+
 	private Card cardFromCursor(Cursor c) {
-		return new Card(
-				c.getInt(0),
-				c.getString(1),
-				c.getString(2),
-				c.getString(3),
-				c.getString(4),
-				c.getInt(5),
-				c.getInt(6),
-				c.getInt(7)
-				);
+		return new Card(c.getInt(0), c.getString(1), c.getString(2),
+				c.getString(3), c.getString(4), c.getInt(5), c.getInt(6),
+				c.getInt(7));
 	}
-	
+
 	private Cursor dueCards() {
-		return db.query(
-			CARDS_TABLE, null,
-			"due < ?", new String[] {Long.toString((new Date()).getTime())},
-			null, null, null);
+		return db.query(CARDS_TABLE, null, "due < ?",
+				new String[] { Long.toString((new Date()).getTime()) }, null,
+				null, null);
 	}
-	
+
 	public int dueCardsCount() {
 		Cursor cursor = dueCards();
 		int count = cursor.getCount();
 		cursor.close();
 		return count;
 	}
-	
+
 	public Card nextDue() {
 		Cursor c = dueCards();
 		c.moveToFirst();
@@ -181,50 +171,62 @@ public final class MySQLiteOpenHelper extends SQLiteOpenHelper {
 		c.close();
 		return next;
 	}
-	
+
 	public Card nextNew() {
-		Cursor c = db.query(
-			CARDS_TABLE, CARDS_TABLE_COLUMNS,
-			"introduced = 0", null,
-			null, null, ID);
-		
+		Cursor c = db.query(CARDS_TABLE, CARDS_TABLE_COLUMNS, "introduced = 0",
+				null, null, null, ID);
+
 		c.moveToFirst();
 		Card next = cardFromCursor(c);
 		c.close();
-		
+
 		ContentValues values = new ContentValues();
 		values.put(INTRODUCED, (new Date()).getTime());
-		db.update(
-			CARDS_TABLE, values, "_id = " + Integer.toString(next._id), null);
-		
+		db.update(CARDS_TABLE, values, "_id = " + Integer.toString(next._id),
+				null);
+
 		return next;
 	}
-	
+
 	public void rememberedCard(Card c) {
+		final int[] CORRECT_DUE = { 30, 60, 90, 150, 300, 12 * 60 * 60,
+				24 * 60 * 60, 2 * 24 * 60 * 60, 3 * 24 * 60 * 60,
+				5 * 24 * 60 * 60, 8 * 24 * 60 * 60, 14 * 24 * 60 * 60,
+				21 * 24 * 60 * 60, 30 * 24 * 60 * 60, 45 * 24 * 60 * 60,
+				60 * 24 * 60 * 60, 60 * 24 * 60 * 60, 60 * 24 * 60 * 60,
+				60 * 24 * 60 * 60, 60 * 24 * 60 * 60, 60 * 24 * 60 * 60,
+				60 * 24 * 60 * 60, 60 * 24 * 60 * 60, 60 * 24 * 60 * 60,
+				60 * 24 * 60 * 60, 60 * 24 * 60 * 60, 60 * 24 * 60 * 60,
+				60 * 24 * 60 * 60, 60 * 24 * 60 * 60, 60 * 24 * 60 * 60,
+				60 * 24 * 60 * 60, 60 * 24 * 60 * 60, 60 * 24 * 60 * 60,
+				60 * 24 * 60 * 60, 60 * 24 * 60 * 60, 60 * 24 * 60 * 60,
+				60 * 24 * 60 * 60, 60 * 24 * 60 * 60, 60 * 24 * 60 * 60,
+				60 * 24 * 60 * 60, 60 * 24 * 60 * 60, 60 * 24 * 60 * 60,
+				60 * 24 * 60 * 60, 60 * 24 * 60 * 60, 60 * 24 * 60 * 60,
+				60 * 24 * 60 * 60, 60 * 24 * 60 * 60 };
+
 		ContentValues values = new ContentValues();
 		values.put(CORRECT, c.correct + 1);
-		values.put(DUE,	 // Cards show up often due to demostration purposes. Adjust.
-			(new Date()).getTime() + Math.exp(c.correct + 1) * 30 * 1000); 
-		db.update(
-			CARDS_TABLE, values, "_id = " + Integer.toString(c._id), null);
+		// Cards show up often due to demostration purposes. Adjust.
+		values.put(DUE, (new Date()).getTime() + CORRECT_DUE[c.correct] * 1000);
+		db.update(CARDS_TABLE, values, "_id = " + Integer.toString(c._id), null);
 	}
-	
+
 	public void forgotCard(Card c) {
 		ContentValues values = new ContentValues();
 		values.put(CORRECT, 0);
 		values.put(DUE, (new Date()).getTime() + 30 * 1000);
-		db.update(
-			CARDS_TABLE, values, "_id = " + Integer.toString(c._id), null);
+		db.update(CARDS_TABLE, values, "_id = " + Integer.toString(c._id), null);
 	}
 
 	public Cursor getCardsCursor() {
-		return db.query(CARDS_TABLE, CARDS_TABLE_COLUMNS, null, null, null, null, ID);
+		return db.query(CARDS_TABLE, CARDS_TABLE_COLUMNS, null, null, null,
+				null, ID);
 	}
-	
-	public int[] correctTally(){
-		Cursor c = db.query(CARDS_TABLE, new String[] {CORRECT, "COUNT(*)"},
-				INTRODUCED + " != ''", null,
-				CORRECT, null, null);
+
+	public int[] correctTally() {
+		Cursor c = db.query(CARDS_TABLE, new String[] { CORRECT, "COUNT(*)" },
+				INTRODUCED + " != ''", null, CORRECT, null, null);
 		int[] result = new int[15];
 		while (c.moveToNext()) {
 			int correct = c.getInt(0);
@@ -234,5 +236,5 @@ public final class MySQLiteOpenHelper extends SQLiteOpenHelper {
 		c.close();
 		return result;
 	}
-	
+
 }

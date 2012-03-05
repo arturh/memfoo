@@ -16,7 +16,6 @@ public class MyMapActivity extends MapActivity {
 		mapView = (MapView) findViewById(R.id.mapview);
 		mapView.setBuiltInZoomControls(true);
 		
-		
 		GeoPoint tokyo = new GeoPoint(35685000, 139751389);
 		MapController mc = mapView.getController();
 		mc.animateTo(tokyo);
