@@ -4,15 +4,17 @@ import java.util.ArrayList;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 public class SpeechActivity extends Activity {
 	private static final int VOICE_RECOGNITION_REQUEST_CODE = 9999;
-
+	ToggleButton tb;
 	/**
 	 * @see android.app.Activity#onCreate(Bundle)
 	 */
@@ -20,6 +22,9 @@ public class SpeechActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		this.setContentView(R.layout.speech);
+		tb = (ToggleButton)findViewById(R.id.toggleButton1);
+		SharedPreferences sp = getSharedPreferences("memfoo.prefs", MODE_PRIVATE);
+		tb.setChecked(sp.getBoolean("DO_VOICE_RECOGNITION", false));
 	}
 
 	/**
@@ -74,4 +79,10 @@ public class SpeechActivity extends Activity {
 		super.onActivityResult(requestCode, resultCode, data);
 	}
 
+	public void toggleVoiceRecognition(View v) {
+		SharedPreferences.Editor editor = getSharedPreferences("memfoo.prefs", MODE_PRIVATE).edit();
+		editor.putBoolean("VOICE_RECOGNITION", tb.isChecked());
+		editor.commit();
+		
+	}
 }

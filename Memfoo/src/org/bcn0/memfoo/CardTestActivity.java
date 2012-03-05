@@ -152,16 +152,12 @@ public class CardTestActivity extends Activity implements OnCompletionListener {
 				RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
 
 		// Specify how many results you want to receive. The results will be
-		// sorted
-		// where the first result is the one with higher confidence.
+		// sorted where the first result is the one with higher confidence.
 		intent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 5);
 
 		// Specify the recognition language. This parameter has to be specified
-		// only if the
-		// recognition has to be done in a specific language and not the default
-		// one (i.e., the
-		// system locale). Most of the applications do not have to set this
-		// parameter.
+		// only if the recognition has to be done in a specific language and
+		// not the default one (i.e., the system locale). 
 		intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "ja-JP");
 
 		startActivityForResult(intent, VOICE_RECOGNITION_REQUEST_CODE);
@@ -179,13 +175,13 @@ public class CardTestActivity extends Activity implements OnCompletionListener {
 			ArrayList<String> matches =
 					data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
 			matches.get(0);
-			if ((matches.indexOf(current.kana) != -1) ||
+			if ((matches.indexOf(current.kanji) != -1) ||
 				(matches.indexOf(current.kana) != -1)) {
 				Toast.makeText(this, "Correct!", Toast.LENGTH_LONG).show();
 			} else {
 				Toast.makeText(this, "Incorrect! " + matches.get(0), Toast.LENGTH_LONG).show();
 			}
-			Toast.makeText(this, matches.toString(), Toast.LENGTH_LONG).show();
+			Log.i("MEMFOO", "matches: " + matches.toString());
 		}
 
 		super.onActivityResult(requestCode, resultCode, data);
@@ -193,11 +189,8 @@ public class CardTestActivity extends Activity implements OnCompletionListener {
 
 	@Override
 	public void onCompletion(MediaPlayer mp) {
-		SharedPreferences sp = getPreferences(MODE_PRIVATE);
-		if (sp.getBoolean("DO_VOICE_RECOGNITION", false))
+		SharedPreferences sp = getSharedPreferences("memfoo.prefs", MODE_PRIVATE);
+		if (sp.getBoolean("VOICE_RECOGNITION", false))
 			startVoiceRecognitionActivity();
-		
-		
-		
 	}
 }
