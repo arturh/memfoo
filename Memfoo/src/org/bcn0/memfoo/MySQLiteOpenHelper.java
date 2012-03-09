@@ -1,8 +1,10 @@
 package org.bcn0.memfoo;
 
+import java.io.BufferedReader;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.util.Date;
 
@@ -40,6 +42,28 @@ public final class MySQLiteOpenHelper extends SQLiteOpenHelper {
 	public MySQLiteOpenHelper(Context context) {
 		super(context, DB_NAME, null, 1);
 		this.context = context;
+	}
+	
+	public void populateDatabase() throws IOException{
+		BufferedReader in
+				   = new BufferedReader(new InputStreamReader(context.getAssets().open("jlptn5.tsv")));
+		String line;
+		while((line = in.readLine()) != null) {
+			line = line.trim();
+			String[] parts = line.split("\t");
+			
+			ContentValues cv=new ContentValues();
+			cv.put(KANJI, parts[0]);
+			cv.put(KANA, parts[1]);
+			cv.put(MEANING, parts[2]);
+			cv.put(AUDIO, parts[3]);
+			
+			// Since SQL doesn't allow the insertion of a completely empty row,
+			// the second parameter of db.insert defines the column that will
+			// receive NULL if cv is empty
+			
+			db.insert(CARDS_TABLE, null, cv);
+		}
 	}
 
 	public void createDataBase() throws IOException {
