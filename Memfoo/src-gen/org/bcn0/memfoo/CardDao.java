@@ -27,6 +27,7 @@ public class CardDao extends AbstractDao<Card, Long> {
         public final static Property Due = new Property(5, java.util.Date.class, "due", false, "DUE");
         public final static Property Introduced = new Property(6, java.util.Date.class, "introduced", false, "INTRODUCED");
         public final static Property Correct = new Property(7, Integer.class, "correct", false, "CORRECT");
+        public final static Property Lesson = new Property(8, String.class, "lesson", false, "LESSON");
     };
 
 
@@ -48,7 +49,8 @@ public class CardDao extends AbstractDao<Card, Long> {
                 "'AUDIO' TEXT," + // 4: audio
                 "'DUE' INTEGER," + // 5: due
                 "'INTRODUCED' INTEGER," + // 6: introduced
-                "'CORRECT' INTEGER);"; // 7: correct
+                "'CORRECT' INTEGER," + // 7: correct
+                "'LESSON' TEXT);"; // 8: lesson
         db.execSQL(sql);
     }
 
@@ -102,6 +104,11 @@ public class CardDao extends AbstractDao<Card, Long> {
         if (correct != null) {
             stmt.bindLong(8, correct);
         }
+ 
+        String lesson = entity.getLesson();
+        if (lesson != null) {
+            stmt.bindString(9, lesson);
+        }
     }
 
     /** @inheritdoc */
@@ -121,7 +128,8 @@ public class CardDao extends AbstractDao<Card, Long> {
             cursor.isNull(offset + 4) ? null : cursor.getString(offset + 4), // audio
             cursor.isNull(offset + 5) ? null : new java.util.Date(cursor.getLong(offset + 5)), // due
             cursor.isNull(offset + 6) ? null : new java.util.Date(cursor.getLong(offset + 6)), // introduced
-            cursor.isNull(offset + 7) ? null : cursor.getInt(offset + 7) // correct
+            cursor.isNull(offset + 7) ? null : cursor.getInt(offset + 7), // correct
+            cursor.isNull(offset + 8) ? null : cursor.getString(offset + 8) // lesson
         );
         return entity;
     }
@@ -137,6 +145,7 @@ public class CardDao extends AbstractDao<Card, Long> {
         entity.setDue(cursor.isNull(offset + 5) ? null : new java.util.Date(cursor.getLong(offset + 5)));
         entity.setIntroduced(cursor.isNull(offset + 6) ? null : new java.util.Date(cursor.getLong(offset + 6)));
         entity.setCorrect(cursor.isNull(offset + 7) ? null : cursor.getInt(offset + 7));
+        entity.setLesson(cursor.isNull(offset + 8) ? null : cursor.getString(offset + 8));
      }
     
     @Override

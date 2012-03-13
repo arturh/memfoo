@@ -14,6 +14,7 @@ public class Card {
     private java.util.Date due;
     private java.util.Date introduced;
     private Integer correct;
+    private String lesson;
 
     public Card() {
     }
@@ -22,7 +23,7 @@ public class Card {
         this.id = id;
     }
 
-    public Card(Long id, String kanji, String kana, String meaning, String audio, java.util.Date due, java.util.Date introduced, Integer correct) {
+    public Card(Long id, String kanji, String kana, String meaning, String audio, java.util.Date due, java.util.Date introduced, Integer correct, String lesson) {
         this.id = id;
         this.kanji = kanji;
         this.kana = kana;
@@ -31,6 +32,7 @@ public class Card {
         this.due = due;
         this.introduced = introduced;
         this.correct = correct;
+        this.lesson = lesson;
     }
 
     public Long getId() {
@@ -95,6 +97,14 @@ public class Card {
 
     public void setCorrect(Integer correct) {
         this.correct = correct;
+    }
+
+    public String getLesson() {
+        return lesson;
+    }
+
+    public void setLesson(String lesson) {
+        this.lesson = lesson;
     }
 
 }

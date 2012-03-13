@@ -9,22 +9,22 @@ public class CardGraphActivity extends Activity {
 	/**
 	 * @see android.app.Activity#onCreate(Bundle)
 	 */
-	MySQLiteOpenHelper msoh;
+//	MySQLiteOpenHelper msoh;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.cardgraph);
-		CardGraph cg = (CardGraph)findViewById(R.id.cardGraph1);
-		msoh = new MySQLiteOpenHelper(this);
-		try {
-			msoh.createDataBase();
-		} catch (IOException e) {
-			e.printStackTrace();
-			finish();
-		}
-		msoh.openDataBase();
-		cg.setData(msoh.correctTally());
-		msoh.close();
+//		super.onCreate(savedInstanceState);
+//		setContentView(R.layout.cardgraph);
+//		CardGraph cg = (CardGraph)findViewById(R.id.cardGraph1);
+//		msoh = new MySQLiteOpenHelper(this);
+//		try {
+//			msoh.createDataBase();
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//			finish();
+//		}
+//		msoh.openDataBase();
+//		cg.setData(msoh.correctTally());
+//		msoh.close();
 	}
 
 	/**

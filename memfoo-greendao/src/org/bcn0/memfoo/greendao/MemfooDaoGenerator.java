@@ -48,6 +48,7 @@ public class MemfooDaoGenerator {
        card.addDateProperty("due");
        card.addDateProperty("introduced");
        card.addIntProperty("correct");
+       card.addStringProperty("lesson");
    }
 
 }

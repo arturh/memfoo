@@ -1,12 +1,23 @@
 package org.bcn0.memfoo;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+
+import org.bcn0.memfoo.CardDao.Properties;
+import org.bcn0.memfoo.DaoMaster.DevOpenHelper;
+
+import de.greenrobot.dao.WhereCondition;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.net.Uri;
@@ -30,41 +41,87 @@ public class CardTestActivity extends Activity implements OnCompletionListener {
 	LinearLayout answerButtonsLayout;
 	WebView wvFront, wvBack;
 	Button btnPlay;
-	private MySQLiteOpenHelper db;
-	private Card current;
+
 	private TextView tvKanji;
 	private Button btnKana;
 	private TextView tvMeaning;
 	private Button btnShowAnswer;
 
+	private SQLiteDatabase db;
+	private DaoMaster daoMaster;
+	private DaoSession daoSession;
+	private CardDao cardDao;
+
+	private Card currentCard;
+
 	@Override
-	protected void onCreate(Bundle savedInstanceState) { 
+	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.cardtest);
 
 		answerButtonsLayout = (LinearLayout) findViewById(R.id.linearLayout1);
-		btnShowAnswer = (Button)findViewById(R.id.btnShowBack);
-		
+		btnShowAnswer = (Button) findViewById(R.id.btnShowBack);
+
 		tvKanji = (TextView) findViewById(R.id.tvKanji);
 		btnKana = (Button) findViewById(R.id.btnKana);
 		tvMeaning = (TextView) findViewById(R.id.tvMeaning);
 
-		db = new MySQLiteOpenHelper(this);
-		try {
-			db.createDataBase();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			throw new Error("Could not create db");
+		DevOpenHelper helper = new DaoMaster.DevOpenHelper(this, "memfoo-db",
+				null);
+
+		db = helper.getWritableDatabase();
+		daoMaster = new DaoMaster(db);
+		daoSession = daoMaster.newSession();
+		
+		cardDao = daoSession.getCardDao();
+		
+		if (cardDao.loadAll().size() < 600) {
+			try {
+				populateDatabase();
+			} catch (Exception e) {
+				Log.e("MEMFOO", e.toString());
+				finish();
+			}
 		}
-		db.openDataBase();
+
 		loadNext();
+	}
+
+	private void populateDatabase() throws IOException {
+		BufferedReader in = new BufferedReader(new InputStreamReader(
+			getAssets().open("jlptn5.tsv")));
+		String line;
+		while ((line = in.readLine()) != null) {
+			Log.i("MEMFOO", "card insert: 0 ");
+			if (line.charAt(0) == '#') continue;
+			if (line.charAt(0) == ' ') continue;
+			Card newCard = null;
+			try {
+				String[] parts = line.split("\t");
+				newCard = new Card(
+						/* id         */ null,
+						/* kanji      */ parts[0],
+						/* kana       */ parts[1],
+						/* meaning    */ parts[2],
+						/* audio      */ parts[3],
+						/* due        */ null,
+						/* introduced */ null,
+						/* correct    */ 0,
+						/* lesson     */ "lesson"
+				);
+				Log.i("MEMFOO", "card insert: " + newCard.toString());
+					
+			} catch (Exception e) {
+				Log.e("MEMFOO", "line not parsed:" + line);
+			}
+			cardDao.insert(newCard);
+		}
 	}
 
 	public void showBack(View v) {
 		btnKana.setVisibility(View.VISIBLE);
 		tvMeaning.setVisibility(View.VISIBLE);
-		
+
 		btnShowAnswer.setVisibility(View.GONE);
 		answerButtonsLayout.setVisibility(View.VISIBLE);
 	}
@@ -78,44 +135,80 @@ public class CardTestActivity extends Activity implements OnCompletionListener {
 	}
 
 	public void rememberCard(View v) {
-		db.rememberedCard(current);
+		// How long to wait after <correct> consecutive correct answers
+		// (seconds)
+		int[] correctToDue = { 90, 600, 6000, 6000, 6000, 6000, 6000, 6000,
+				6000 };
+		currentCard.setCorrect(currentCard.getCorrect() + 1);
 		
-//		try {
-//		Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-//		long[] pattern = {0, 50, 50};
-//		vibrator.vibrate(pattern, current.correct + 1);
-//		
-//		} catch (Exception e) {
-//			Log.i("MEMFOO", e.toString());
-//		}
-		
+		if (currentCard.getIntroduced() == null) {
+			currentCard.setIntroduced(new Date());
+		}
+
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(new Date());
+		calendar.add(Calendar.SECOND, correctToDue[currentCard.getCorrect()]);
+		currentCard.setDue(calendar.getTime());
+
+		cardDao.update(currentCard);
+
 		loadNext();
 	}
 
 	public void forgetCard(View v) {
-		db.forgotCard(current);
+		currentCard.setCorrect(0);
+
+		if (currentCard.getIntroduced() == null) {
+			currentCard.setIntroduced(new Date());
+		}
 		
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(new Date());
+		calendar.add(Calendar.SECOND, 90);
+		currentCard.setDue(calendar.getTime());
+
+		cardDao.update(currentCard);
+
 		Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-		long[] pattern = {0, 100, 100, 100};
+		long[] pattern = { 0, 100, 100, 100 };
 		vibrator.vibrate(pattern, -1);
-		
+
 		loadNext();
 	}
 
+	public List<Card> dueCards() {
+		
+
+		return cardDao.queryBuilder()
+				.where(Properties.Due.lt(new Date()))
+				.orderAsc(Properties.Due)
+				.list();
+	}
+
+	public List<Card> newCards() {
+		
+		return cardDao.queryBuilder()
+				.where(Properties.Introduced.isNull())
+				.orderAsc(Properties.Due)
+				.list();
+		
+	}
+
 	public void loadNext() {
-		if (db.dueCardsCount() > 0) {
-			this.current = db.nextDue();
+		if (dueCards().size() > 0) {
+			this.currentCard = dueCards().get(0);
 		} else {
-			this.current = db.nextNew();
+			this.currentCard = newCards().get(0);
 		}
-		if (current.kanji.equals("")) {
-			tvKanji.setText(current.kana);
-			btnKana.setText("\u25B7 " + current.kana);
-			tvMeaning.setText(current.meaning);
+
+		if (currentCard.getKanji().equals("")) {
+			tvKanji.setText(currentCard.getKana());
+			btnKana.setText("\u25B7 " + currentCard.getKana());
+			tvMeaning.setText(currentCard.getMeaning());
 		} else {
-			tvKanji.setText(current.kanji);
-			btnKana.setText("\u25B7 " + current.kana);
-			tvMeaning.setText(current.meaning);
+			tvKanji.setText(currentCard.getKanji());
+			btnKana.setText("\u25B7 " + currentCard.getKana());
+			tvMeaning.setText(currentCard.getMeaning());
 		}
 
 		showFront(null);
@@ -124,7 +217,7 @@ public class CardTestActivity extends Activity implements OnCompletionListener {
 	public void playKana(View v) {
 		try {
 			Uri uri = Uri.parse("android.resource://org.bcn0.memfoo/raw/"
-					+ this.current.audio);
+					+ this.currentCard.getAudio());
 			MediaPlayer mp = MediaPlayer.create(this, uri);
 			mp.start();
 			mp.setOnCompletionListener(this);
@@ -132,7 +225,7 @@ public class CardTestActivity extends Activity implements OnCompletionListener {
 			Log.i("MemFoo", e.toString());
 		}
 	}
-	
+
 	/**
 	 * Fire an intent to start the speech recognition activity.
 	 */
@@ -157,7 +250,7 @@ public class CardTestActivity extends Activity implements OnCompletionListener {
 
 		// Specify the recognition language. This parameter has to be specified
 		// only if the recognition has to be done in a specific language and
-		// not the default one (i.e., the system locale). 
+		// not the default one (i.e., the system locale).
 		intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "ja-JP");
 
 		startActivityForResult(intent, VOICE_RECOGNITION_REQUEST_CODE);
@@ -172,14 +265,15 @@ public class CardTestActivity extends Activity implements OnCompletionListener {
 				&& resultCode == RESULT_OK) {
 			// Fill the list view with the strings the recognizer thought it
 			// could have heard
-			ArrayList<String> matches =
-					data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+			ArrayList<String> matches = data
+					.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
 			matches.get(0);
-			if ((matches.indexOf(current.kanji) != -1) ||
-				(matches.indexOf(current.kana) != -1)) {
+			if ((matches.indexOf(currentCard.getKanji()) != -1)
+					|| (matches.indexOf(currentCard.getKana()) != -1)) {
 				Toast.makeText(this, "Correct!", Toast.LENGTH_LONG).show();
 			} else {
-				Toast.makeText(this, "Incorrect! " + matches.get(0), Toast.LENGTH_LONG).show();
+				Toast.makeText(this, "Incorrect! " + matches.get(0),
+						Toast.LENGTH_LONG).show();
 			}
 			Log.i("MEMFOO", "matches: " + matches.toString());
 		}
@@ -189,7 +283,8 @@ public class CardTestActivity extends Activity implements OnCompletionListener {
 
 	@Override
 	public void onCompletion(MediaPlayer mp) {
-		SharedPreferences sp = getSharedPreferences("memfoo.prefs", MODE_PRIVATE);
+		SharedPreferences sp = getSharedPreferences("memfoo.prefs",
+				MODE_PRIVATE);
 		if (sp.getBoolean("VOICE_RECOGNITION", false))
 			startVoiceRecognitionActivity();
 	}
