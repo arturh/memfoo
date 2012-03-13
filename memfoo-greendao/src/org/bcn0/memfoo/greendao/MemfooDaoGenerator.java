@@ -35,7 +35,7 @@ public class MemfooDaoGenerator {
 
        addCard(schema);
 
-       new DaoGenerator().generateAll(schema, "../memfoo/src-gen");
+       new DaoGenerator().generateAll(schema, "../Memfoo/src-gen");
    }
 
    private static void addCard(Schema schema) {
