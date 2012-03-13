@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/samurai"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="10" >
+
+        <Button
+            android:id="@+id/btnShowBack"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="#aaaa"
+            android:minHeight="140dp"
+            android:onClick="showBack"
+            android:text="Show back" />
+
+        <TextView
+            android:id="@+id/tvKanji"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="23dp"
+            android:background="#cfff"
+            android:gravity="center"
+            android:text="かんじ"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#000"
+            android:textSize="48sp" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="140dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/btnShowBack"
+            android:minHeight="140dp" >
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:background="#aaaa"
+                android:onClick="rememberCard"
+                android:text="I remember" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:background="#aaaa"
+                android:onClick="forgetCard"
+                android:text="I forgot" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvMeaning"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="#cfff"
+            android:paddingTop="12sp"
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#000" />
+
+        <Button
+            android:id="@+id/btnKana"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_alignBottom="@+id/tvKanji"
+            android:layout_alignParentRight="true"
+            android:background="#aaaa"
+            android:onClick="playKana"
+            android:text="かなおんがく"
+            android:textSize="15dp" android:paddingLeft="15dp" android:paddingRight="15dp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
