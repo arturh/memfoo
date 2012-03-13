@@ -4,21 +4,43 @@ import java.util.Vector;
 
 import org.bcn0.memfoo.Card;
 import org.bcn0.memfoo.Lesson;
+import org.bcn0.memfoo.NoDueCardsException;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import android.util.Log;
 
 
 public class LessonTest {
 
 	private Lesson lesson;
+	private Lesson empty_lesson;
+	
+	
+	@Test
+	public void test_empty_lesson() {
+		assertFalse(empty_lesson.hasDue());
+		try {
+			assertNull(empty_lesson.nextDueCard());
+			fail("Expected exception.");
+		} catch (NoDueCardsException e) { }
+		
+		assertEquals(0, empty_lesson.dueCards());
+		assertEquals(0, empty_lesson.newCardsCount());
+		assertEquals(0, empty_lesson.totalCards());
+		
+	}
+
 
 	@Before
 	public void setUp() throws Exception {
-		Vector cards = new Vector();
+		Vector<Card> cards = new Vector<Card>();
 		Card new_card = new Card(0, "kanji", "kana", "meaning", "audio", 0, 0, 0);
 		cards.add(new_card);
 		this.lesson = new Lesson(cards);
+		
+		this.empty_lesson = new Lesson(new Vector<Card>());
 	}
 
 	@After
@@ -29,7 +51,7 @@ public class LessonTest {
 	public void testInitialCounts() {
 		assertEquals(1, lesson.totalCards());
 		assertEquals(0, lesson.dueCards());
-		assertEquals(1, lesson.newCards());
+		assertEquals(1, lesson.newCardsCount());
 	}
 	
 	@Test
@@ -40,9 +62,13 @@ public class LessonTest {
 	
 	@Test
 	public void testForgetCard() {
-		Card card = lesson.nextNewCard();
+		assertEquals(1, lesson.newCardsCount());
+		lesson.nextNewCard();
+		System.out.println(lesson.newCards());
 		lesson.forgetCurrentCard();
-		assertEquals(0, lesson.newCards());
+		System.out.println(lesson.newCards());
+		assertEquals(0, lesson.newCardsCount());
 	}
+
 
 }
