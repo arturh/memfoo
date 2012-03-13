@@ -70,13 +70,13 @@ public final class Lesson {
 		
 			Card newCard = new Card(
 					_id, kanji, kana, meaning, audio, due, introduced, correct);
-			int current_card_location = cards.indexOf(currentCard);
+			int current_card_index = cards.indexOf(currentCard);
 			
-			cards.set(current_card_location, newCard);
+			cards.set(current_card_index, newCard);
 			currentCard = newCard;
 	}
 
-	public List<Card> newCards() {
+	private List<Card> newCards() {
 		ArrayList<Card> new_cards = new ArrayList<Card>();
 		for (Card card : cards) {
 			if (card.introduced == 0) {

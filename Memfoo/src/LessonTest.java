@@ -64,9 +64,7 @@ public class LessonTest {
 	public void testForgetCard() {
 		assertEquals(1, lesson.newCardsCount());
 		lesson.nextNewCard();
-		System.out.println(lesson.newCards());
 		lesson.forgetCurrentCard();
-		System.out.println(lesson.newCards());
 		assertEquals(0, lesson.newCardsCount());
 	}
 
