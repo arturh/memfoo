@@ -1,0 +1,728 @@
+212		きれい 	na-adj 	pretty, clean, nice, tidy	adjective01
+594	古い 	ふるい 	adj 	old (not person), aged, ancient	adjective01
+100	大きい 	おおきい 	adj 	big	adjective01
+403	小さい 	ちいさい 	adj 	small, little	adjective01
+727	悪い 	わるい 	adj 	bad, inferior	adjective01
+21	新しい 	あたらしい 	adj 	new	adjective01
+548	早い 	はやい 	adj 	early	adjective01
+720	若い 	わかい 	adj 	young	adjective01
+549	速い 	はやい 	adj 	quick, fast	adjective01
+115	遅い 	おそい 	adj 	late, slow	adjective01
+45		いい/よい 	adj 	good	adjective01
+86		うるさい 	adj 	noisy, loud, annoying	adjective01
+101	大きな 	おおきな 	na-adj 	big	adjective01
+404	小さな 	ちいさな 	na-adj 	small, little	adjective01
+299	静か 	しずか 	na-adj 	quiet, peaceful	adjective01
+377	大好き 	だいすき 	na-adj, n 	very likeable, like very much	adjective01
+332	好き 	すき 	na-adj, n 	liking, fondness, love	adjective01
+209	嫌い 	きらい 	na-adj, n 	dislike, hate	adjective01
+35	危ない 	あぶない 	adj 	dangerous, critical, watch out!	adjective02
+701	弱い 	よわい 	adj 	weak, feable	adjective02
+427	強い 	つよい 	adj 	strong, powerful	adjective02
+183	軽い 	かるい 	adj 	light, non-serious, minor	adjective02
+456	遠い 	とおい 	adj 	far, distant	adjective02
+135	重い 	おもい 	adj 	heavy	adjective02
+382	高い 	たかい 	adj 	tall, high	adjective02
+136		おもしろい 	adj 	interesting, amusing	adjective02
+425		つまらない 	adj 	insignificant, boring	adjective02
+405	近い 	ちかい 	adj, suf 	near, close by, short	adjective02
+376	大丈夫 	だいじょうぶ 	na-adj, adv, n 	safe, all right, O.K.	adjective02
+321	丈夫 	じょうぶ 	na-adj, n 	strong, solid, durable	adjective02
+639	丸い/円い 	まるい 	adj 	round, circular	adjective03
+566	低い 	ひくい 	adj 	short, low	adjective03
+591	太い 	ふとい 	adj 	fat, thick	adjective03
+352	狭い 	せまい 	adj 	narrow, confined, small	adjective03
+644	短い 	みじかい 	adj 	short	adjective03
+614	細い 	ほそい 	adj 	thin, slender, fine	adjective03
+79	薄い 	うすい 	adj 	thin, weak	adjective03
+484	長い 	ながい 	adj 	long	adjective03
+320	上手 	じょうず 	na-adj, n 	skill, skillful, dexterity	adjective03
+599	下手 	へた 	na-adj, n 	unskillful, poor	adjective03
+580	広い 	ひろい 	adj 	spacious, wide	adjective04
+392	楽しい 	たのしい 	adj 	enjoyable, fun	adjective04
+188		かわいい 	adj 	cute, charming	adjective04
+690		ゆっくり・と 	adv, n 	slowly, at ease	adjective04
+347	背 	せい 	n 	height, stature	adjective04
+381		たいへん 	na-adj, adv, n 	difficult situation, tough situation	adjective04
+606	便利 	べんり 	na-adj, n 	convenient, handy	adjective04
+378	大切 	たいせつ 	na-adj, n 	important	adjective04
+70	嫌 	いや 	na-adj, n 	disagreeable, no	adjective04
+688	有名 	ゆうめい 	na-adj, n 	famous	adjective04
+502		にぎやか 	na-adj, n 	bustling, busy	adjective04
+707		りっぱ 	na-adj, n 	splendid, fine	adjective04
+238	結構 	けっこう 	na-adj, n-adv, n 	nice, enough	adjective04
+426	冷たい 	つめたい 	adj 	cold (to the touch)	adjective05
+25	厚い 	あつい 	adj 	kind, warm(hearted), thick, deep	adjective05
+19	暖かい 	あたたかい 	adj 	warm, mild	adjective05
+337	涼しい 	すずしい 	adj 	cool, refreshing	adjective05
+512	温い 	ぬるい 	adj 	lukewarm	adjective05
+24	熱い 	あつい 	adj 	hot (thing)	adjective05
+179	辛い 	からい 	adj 	spicy, salty	adjective05
+98		おいしい 	adj 	delicious, tasty	adjective05
+631		まずい 	adj 	unappetising, unpleasant (taste)	adjective05
+36	甘い 	あまい 	adj, expr 	generous, sweet	adjective05
+180	体 	からだ 	n 	body	body
+221	口 	くち 	n 	mouth, orifice, opening	body
+428	手 	て 	n 	hand	body
+522	歯 	は 	n 	tooth	body
+662	目 	め 	n 	eye, eyeball	body
+654	耳 	みみ 	n 	ear	body
+15	足 	あし 	n 	foot, leg	body
+20	頭 	あたま 	n 	head	body
+153	顔 	かお 	n 	face (person)	body
+544	鼻 	はな 	n 	nose	body
+125		おなか 	n 	stomach	body
+357	先生 	せんせい 	n 	teacher, master, doctor	classroom
+206	教室 	きょうしつ 	n 	classroom	classroom
+421	机 	つくえ 	n 	desk	classroom
+229		クラス 	n 	class	classroom
+318	授業 	じゅぎょう 	n, vs 	lesson, class work	classroom
+436		テスト 	n, vs 	test	classroom
+113	教える 	おしえる 	ru-v 	to teach, to inform	classroom
+393	頼む 	たのむ 	u-v 	to request, to ask	classroom
+87	上着 	うわぎ 	n 	coat, jacket	clothes
+692	洋服 	ようふく 	n 	Western-style clothes	clothes
+351	背広 	せびろ 	n 	business suit	clothes
+222	靴 	くつ 	n 	shoes, footwear	clothes
+223	靴下 	くつした 	n 	socks	clothes
+251		コート 	n 	coat	clothes
+313		シャツ 	n 	shirt, singlet	clothes
+331		スカート 	n 	skirt	clothes
+342		ズボン 	n 	trousers (fr: jupon)	clothes
+344		スリッパ 	n 	slippers	clothes
+349		セーター 	n 	sweater, jumper	clothes
+719		ワイシャツ 	n 	shirt (lit: white shirt), business shirt	clothes
+586	服 	ふく 	n, n-suf 	clothes	clothes
+211	着る 	きる 	ru-v 	to wear, to put on (from shoulders down)	clothes
+310	締める 	しめる 	ru-v 	to tie, to fasten	clothes
+159		かける 	ru-v 	to put on (eg glasses)	clothes
+511	脱ぐ 	ぬぐ 	u-v 	to take off clothes	clothes
+175		かぶる 	u-v 	to wear, to put on (head)	clothes
+529		はく 	u-v 	to wear, to put on (trousers)	clothes
+608	帽子 	ぼうし 	n 	hat	clothes complements
+664	眼鏡 	めがね 	n 	spectacles, glasses	clothes complements
+277	財布 	さいふ 	n 	wallet	clothes complements
+173		かばん 	n 	bag, basket	clothes complements
+513		ネクタイ 	n 	tie, necktie	clothes complements
+558		ハンカチ 	n 	handkerchief	clothes complements
+611		ポケット 	n 	pocket	clothes complements
+615		ボタン 	n 	button	clothes complements
+7	明るい 	あかるい 	adj 	bright, cheerful	color
+227	暗い 	くらい 	adj 	dark, gloomy	color
+326	白い 	しろい 	adj 	white	color
+6	赤い 	あかい 	adj 	red	color
+4	青い 	あおい 	adj 	blue	color
+192	黄色い 	きいろい 	adj 	yellow	color
+234	黒い 	くろい 	adj 	black	color
+325	白 	しろ 	n 	white	color
+651	緑 	みどり 	n 	green	color
+75	色 	いろ 	n 	colour	color
+411	茶色 	ちゃいろ 	n 	brown	color
+5	赤 	あか 	n 	red	color
+3	青 	あお 	n 	blue	color
+191	黄色 	きいろ 	n 	yellow	color
+233	黒 	くろ 	n 	black	color
+283	～冊 	～さつ 	n 	counter for books	counter
+143	～回 	～かい 	n 	counter for occurrences	counter
+525	～杯 	～はい 	n 	counter for cupfuls	counter
+144	～階 	～かい 	n 	counter for storeys of a building	counter
+447	～度 	～ど 	n-suf 	counter for occurrences	counter
+327	～人 	～にん 	n, suf 	counter for people	counter
+243	～個 	～こ 	n, suf 	counter for small items	counter
+373	～台 	～だい 	suf 	counter for vehicles/machines	counter
+510	～人 	～にん 		counter for people	counter
+563	～匹 	～ひき 		counter for small animals	counter
+618	～本 	～ほん 		counter for long cylindrical things	counter
+621	～枚 	～まい 		counter for flat things	counter
+645	水 	みず 	n 	water	drink
+204	牛乳 	ぎゅうにゅう 	n 	milk	drink
+285	砂糖 	さとう 	n 	sugar	drink
+248	紅茶 	こうちゃ 	n 	black tea	drink
+519	飲み物 	のみもの 	n 	drink, beverage	drink
+170		カップ 	n 	cup	drink
+252		コーヒー 	n 	coffee	drink
+261		コップ 	n 	cup	drink
+520	飲む 	のむ 	u-v 	to drink	drink
+109	お酒 	おさけ 	n 	alcohol, sake (rice wine)	drink
+452		どうぞ 	adv 	please, kindly, by all means	etiquette
+454		どうも 	adv, int 	thanks, very	etiquette
+668		もしもし 	conj, int 	hello (on phone)	etiquette
+219		ください 	kana only 	(with te-form verb) please do for me	etiquette
+97		お～ 	prefix 	honourable ～ (honorific)	etiquette
+288		～さん 	suf 	Mr or Mrs	etiquette
+698	呼ぶ 	よぶ 	u-v 	to call out, to invite	etiquette
+239	結婚 	けっこん（する） 	adj-no, n, vs 	marriage	family
+709	両親 	りょうしん 	n 	parents, both parents	family
+129	伯母さん/叔母さん 	おばさん 	n 	aunt	family
+111	伯父/叔父・さん 	おじ・さん 	n 	uncle, middle aged man	family
+29	兄 	あに 	n 	(hum) older brother	family
+207	兄弟 	きょうだい 	n 	siblings (brothers and sisters)	family
+69	妹 	いもうと 	n 	younger sister	family
+30	姉 	あね 	n 	(hum) older sister	family
+264	子供 	こども 	n 	child, children	family
+166	家族 	かぞく 	n 	family	family
+119	弟 	おとうと 	n 	younger brother	family
+547	母 	はは 	n 	(one's own) mother	family
+410	父 	ちち 	n 	(one's own) father	family
+112		おじいさん 	n 	grandfather, male senior citizen	family
+130		おばあさん 	n 	grandmother, female senior-citizen	family
+83	生まれる 	うまれる 	ru-v 	to be born	family
+127	お兄さん 	おにいさん 	n 	(hon) older brother	family honorific
+128	お姉さん 	おねえさん 	n 	(hon) older sister	family honorific
+103	お母さん 	おかあさん 	n 	(hon) mother	family honorific
+118	お父さん 	おとうさん 	n 	(hon) father	family honorific
+108	奥さん 	おくさん 	n 	(hon) wife	family honorific
+132	お弁当 	おべんとう 	n 	boxed lunch	food
+110	お皿 	おさら 	n 	plate, dish	food
+116	お茶 	おちゃ 	n 	tea (green)	food
+104	お菓子 	おかし 	n 	confections, sweets, candy	food
+396	食べ物 	たべもの 	n 	food	food
+39	飴 	あめ 	n 	(hard) candy, toffee	food
+532		はし 	n 	chopsticks	food
+715		レストラン 	n 	restaurant	food
+397	食べる 	たべる 	ru-v 	to eat	food
+210	切る 	きる 	suf, u-v 	to cut, to chop	food
+476	とり肉 	とりにく 	n 	chicken meat	food ingredients
+398	卵 	たまご 	n 	egg(s)	food ingredients
+293	塩 	しお 	n 	salt	food ingredients
+220	果物 	くだもの 	n 	fruit	food ingredients
+203	牛肉 	ぎゅうにく 	n 	beef	food ingredients
+503	肉 	にく 	n 	meat	food ingredients
+588	豚肉 	ぶたにく 	n 	pork	food ingredients
+676	野菜 	やさい 	n 	vegetable	food ingredients
+278	魚 	さかな 	n 	fish	food ingredients
+184		カレー 	n 	curry	food ingredients
+322		しょうゆ 	n 	soy sauce	food ingredients
+538		バター 	n 	butter	food ingredients
+557		パン 	n 	bread	food ingredients
+57	痛い 	いたい 	adj 	painful	health
+576	病気 	びょうき 	n 	illness, disease, sickness	health
+164	風邪 	かぜ 	n 	cold, illness	health
+242	元気 	げんき 	na-adj, n 	health	health
+330	吸う 	すう 	u-v 	to smoke, to breathe in, to suck	health
+305	死ぬ 	しぬ 	v5n 	to die	health
+171	家庭 	かてい 	n 	home, household	home
+172	角 	かど 	n 	corner (e.g. desk)	home
+82		うち 	n 	house (one's own)	home
+155		かぎ 	n 	key/s	home
+48	家 	いえ 	suf 	house, family	home
+361	掃除 	そうじ（する） 	n, vs 	cleaning, sweeping	home activity
+358	洗濯 	せんたく 	n, vs 	washing, laundry	home activity
+515	寝る 	ねる 	ru-v 	to go to bed, to sleep	home activity
+106	起きる 	おきる 	ru-v 	to get up, to rise	home activity
+34		あびる 	ru-v 	to bathe, to shower	home activity
+160		かける 	ru-v 	to dial/call (eg phone)	home activity
+40	洗う 	あらう 	u-v 	to wash	home activity
+642	磨く 	みがく 	u-v 	to brush (teeth)	home activity
+713	冷蔵庫 	れいぞうこ 	n 	refrigerator	home furniture
+460	時計 	とけい 	n 	watch, clock	home furniture
+619	本棚 	ほんだな 	n 	bookshelves	home furniture
+55		いす 	n 	chair	home furniture
+339		ストーブ 	n 	heater (lit: stove)	home furniture
+431		テーブル 	n 	table	home furniture
+131	お風呂 	おふろ 	n 	bath	home hygiene
+350	石鹸 	せっけん 	n 	soap	home hygiene
+314		シャワー 	n 	shower	home hygiene
+449		トイレ 	n 	toilet	home hygiene
+595		ふろ 	n 	bath	home hygiene
+600		ベッド 	n 	bed	home hygiene
+117	お手洗い 	おてあらい 		toilet, lavatory, bathroom	home hygiene
+197	汚い 	きたない 	adj 	dirty, messy	home room
+379	台所 	だいどころ 	n 	kitchen	home room
+717	廊下 	ろうか 	n 	corridor	home room
+446	戸 	と 	n 	door (Japanese style)	home room
+638	窓 	まど 	n 	window	home room
+602	部屋 	へや 	n 	room	home room
+148	階段 	かいだん 	n 	stairs	home room
+448		ドア 	n 	door (Western style)	home room
+66	犬 	いぬ 	n	dog	home things
+312	写真 	しゃしん 	n 	photograph	home things
+526	灰皿 	はいざら 	n 	ashtray	home things
+514	猫 	ねこ 	n 	cat	home things
+530	箱 	はこ 	n 	box	home things
+174	花瓶 	かびん 	n 	(flower) vase	home things
+443	電気 	でんき 	n 	electricity, (electric) light	home things
+185		カレンダー 	n 	calendar	home things
+394		たばこ 	n 	tobacco, cigarettes	home things
+601		ペット 	n 	pet	home things
+637		マッチ 	n 	match	home things
+88	絵 	え 	n, n-suf 	picture, drawing, painting, sketch	home things
+80	歌 	うた 	n 	song	leisure
+140	音楽 	おんがく 	n 	music	leisure
+196		ギター 	n 	guitar	leisure
+341		スポーツ 	n 	sport	leisure
+523		パーティー 	n 	party	leisure
+565	弾く 	ひく 	u-v 	to play (piano,  guitar)	leisure
+81	歌う 	うたう 	u-v 	to sing	leisure
+137	泳ぐ 	およぐ 	u-v 	to swim	leisure
+18	遊ぶ 	あそぶ 	u-v 	to play, to enjoy oneself	leisure
+# 	Kanji 	Kana 	Type 	Definition/s	lesson
+685	夕飯 	ゆうはん 	n 	dinner	meal
+266	御飯 	ごはん 	n 	rice (cooked), meal	meal
+579	昼御飯 	ひるごはん 	n 	lunch, midday meal	meal
+560	晩御飯 	ばんごはん 	n 	dinner, evening meal	meal
+13	朝御飯 	あさごはん 	n 	breakfast	meal
+340		スプーン 	n 	spoon	meal
+412		ちゃわん 	n 	rice bowl	meal
+482		ナイフ 	n 	knife	meal
+584		フォーク 	n 	fork	meal
+710	料理 	りょうり 	n, vs 	cooking, cuisine	meal
+230		グラム 	n 	gram	measure
+390		たて 	n 	length, height	measure
+663		メートル 	n 	metre, meter	measure
+213		キロ/キログラム 	n, pref 	kilo (kilogram)	measure
+214		キロ/キロメートル 	n, pref 	kilo (kilometre)	measure
+328	新聞 	しんぶん 	n 	newspaper	media
+89	映画 	えいが 	n 	movie, film	media
+90	映画館 	えいがかん 	n 	movie theatre (theater), cinema	media
+284	雑誌 	ざっし 	n 	magazine	media
+177		カメラ 	n 	camera	media
+429		テープ 	n 	tape	media
+430		テープレコーダー 	n 	tape recorder	media
+441		テレビ 	n 	television, TV	media
+508		ニュース 	n 	news	media
+705		ラジオ 	n 	radio	media
+706		ラジカセ 	n 	radio cassette player	media
+714		レコード 	n 	record	media
+445	電話 	でんわ 	n, vs 	telephone	media
+647	見せる 	みせる 	ru-v 	to show, to display	media
+655	見る 	みる 	ru-v 	to see, to watch	media
+478	撮る 	とる 	u-v 	to take (a photo)	media
+194	聞く 	きく 	u-v 	to hear, to listen, to ask	media
+699	読む 	よむ 	u-v 	to read	media
+724	私 	わたくし 	adj-no, n 	I, myself	misc01
+723	私 	わたし 	adj-no, n 	I, myself	misc01
+63	一緒 	いっしょ 	adv, n 	together	misc01
+534	初め/始め 	はじめ 	expr 	beginning, start	misc01
+493	何 	なん/なに 	int, n 	what	misc01
+224	国 	くに 	n 	country	misc01
+409	地図 	ちず 	n 	map	misc01
+250	声 	こえ 	n 	voice	misc01
+307	自分 	じぶん 	n 	myself, oneself	misc01
+28		あなた 	n 	you	misc01
+359	全部 	ぜんぶ 	n-adv, n-t 	all, entire, whole	misc01
+554	半 	はん 	n-adv, n, n-suf 	half	misc01
+187	側 	～がわ 	n-suf 	～ side	misc01
+126	同じ 	おなじ 	na-adj, n 	same, identical, similar	misc01
+500	何～ 	なん～ 		what sort of ～	misc01
+561	半分 	はんぶん 		half	misc01
+612	欲しい 	ほしい 	adj 	want, in need of, desire	misc02
+336	少し 	すこし 	adv, n 	little, few	misc02
+294		しかし 	conj 	however, but	misc02
+362		そうして/そして 	conj 	and, like that	misc02
+311		じゃ/じゃあ 	conj, int 	well, well then	misc02
+439		でも 	conj, prt 	but, however	misc02
+372		それでは 	exp 	in that situation, well then...	misc02
+610	外 	ほか 	n 	other place, the rest	misc02
+145	外国 	がいこく 	n 	foreign country	misc02
+419	次 	つぎ 	n 	next	misc02
+671	物 	もの 	n 	thing, object	misc02
+545	話 	はなし 	n 	talk, story	misc02
+669	持つ 	もつ 	u-v 	(1) to hold, to carry, (2) to possess	misc02
+146	外国人 	がいこくじん 	n 	foreigner	misc02
+481		ない 	adj 	there isn't, doesn't have	misc03
+367		その 	adj-pn 	that	misc03
+265		この 	adj-pn, int 	this	misc03
+450		どう 	adv 	how, in what way	misc03
+467		とても 	adv 	very	misc03
+488		なぜ 	adv 	why	misc03
+620		ほんとう 	adv 	reality, truth	misc03
+633		まだ 	adv 	yet, still, besides	misc03
+670		もっと 	adv 	more, longer, farther	misc03
+693		よく 	adv 	frequently, often	misc03
+694		よく 	adv 	well, skillfully	misc03
+632		また 	adv, conj, n 	again, and	misc04
+415		ちょっと 	adv, int 	a little, somewhat	misc04
+451		どうして 	adv, int 	why?, for what reason	misc04
+666		もう 	adv, int 	again	misc04
+395		たぶん 	adv, n 	perhaps, probably	misc04
+402		だんだん 	adv, n 	gradually, by degrees	misc04
+275		さあ 	conj, int 	come now,  well	misc04
+524		はい 	conj, int 	yes	misc04
+92		ええ 	conj, int, n 	yes	misc04
+437		では 	expr 	with that...	misc05
+1		ああ 	int 	Ah!, Oh!	misc05
+32		あの 	int 	um...	misc05
+44		あれ 	int, n 	that, that thing	misc05
+46		いいえ 	int, n 	no, not at all	misc05
+269		これ 	int, n 	this	misc05
+370		それ 	n 	it, that	misc05
+479		どれ 	n 	which (of three or more)	misc05
+581		フィルム 	n 	film (roll of)	misc05
+388		～たち 	n-suf 	plural suffix	misc05
+491		～など 	n, n-suf, prt 	et cetera	misc06
+76		いろいろ 	na-adj, adj-no, adv, n 	various	misc06
+273		こんな 	na-adj, adj-pn, adv, n 	such, like this	misc06
+480		どんな 	na-adj, adj-pn, n 	what, what kind of	misc06
+49		いかが 	na-adj, adv, n 	how, in what way	misc06
+380		たいへん 	na-adj, adv, n 	very	misc06
+636		まっすぐ 	na-adj, adv, n 	straight (ahead), direct	misc06
+31		あの 	pren-adj 	that over there	misc06
+470		どの 	pren-adj 	which	misc06
+384		～だけ 	prt 	only ～, just ～	misc06
+485		～ながら 	prt 	while ~ing, during, although	misc06
+434		できる 	ru-v 	to be able to	misc07
+182		～がる 	suf 	feel	misc07
+333		～すぎ 	suf 	to exceed, ～ too much	misc07
+338		～ずつ 	suf 	at a time, gradually	misc07
+371		それから 	uk 	and then, after that	misc07
+607		ほう 		way	misc07
+360		そう/そうです 		appears, to be the case	misc07
+225	曇り 	くもり 	adv 	cloudiness, cloudy weather	nature
+453	動物 	どうぶつ 	n 	animal	nature
+682	山 	やま 	n 	mountain	nature
+186	川/河 	かわ 	n 	river	nature
+190	木 	き 	n 	tree, wood	nature
+53	池 	いけ 	n 	pond	nature
+84	海 	うみ 	n 	sea, beach	nature
+369	空 	そら 	n 	sky	nature
+543	花 	はな 	n 	flower	nature
+475	鳥 	とり 	n 	bird	nature
+280	咲く 	さく 	u-v 	to bloom	nature
+486	鳴く 	なく 	u-v 	to sing (bird), to make sound (animal)	nature
+286	寒い 	さむい 	adj 	cold (e.g. weather)	nature weather
+23	暑い 	あつい 	adj 	hot, warm	nature weather
+161	傘 	かさ 	n 	umbrella	nature weather
+442	天気 	てんき 	n 	weather	nature weather
+38	雨 	あめ 	n 	rain	nature weather
+689	雪 	ゆき 	n 	snow	nature weather
+163	風 	かぜ 	n 	wind, breeze	nature weather
+552	晴れ 	はれ 	ru-v 	clear weather	nature weather
+553	晴れる 	はれる 	ru-v 	to be sunny	nature weather
+585	吹く 	ふく 	u-v 	to blow (wind,  etc)	nature weather
+226	曇る 	くもる 	u-v 	to become cloudy, to become dim	nature weather
+593	降る 	ふる 	u-v 	to precipitate, to fall (e.g. rain)	nature weather
+640	万 	まん 	adv, num 	ten thousand, everything	number
+559	番号 	ばんごう 	n 	number	number
+712	零 	れい 	n 	zero, nought	number
+353		ゼロ 	n 	zero	number
+60		いちばん 	n-adv 	best, first, number one	number
+556	～番 	～ばん 	n-adv, n-t 	～st/th best	number
+58	一 	いち 	num 	one	number
+301	七 	しち 	num 	seven	number
+289	三 	さん 	num 	three	number
+202	九 	きゅう 	num 	nine	number
+501	二 	に 	num 	two	number
+244	五 	ご 	num 	five	number
+541	八 	はち 	num 	eight	number
+718	六 	ろく 	num 	six	number
+315	十 	じゅう 	num 	ten	number
+455	十 	とお 	num 	ten	number
+291	四 	し 	num 	four	number
+574	百 	ひゃく 	num 	100, hundred	number
+217	九 	く 	number 	nine	number
+354	千 	せん 		thousand, many	number
+570	一つ 	ひとつ 	n 	one	number count
+492	七つ 	ななつ 	n 	seven	number count
+650	三つ 	みっつ 	n 	three	number count
+256	九つ 	ここのつ 	n 	nine	number count
+587	二つ 	ふたつ 	n 	two	number count
+64	五つ 	いつつ 	n 	five	number count
+697	四つ 	よっつ 	n 	four	number count
+51		いくつ 	n 	how many?, how old?	number count
+681	八つ 	やっつ 	num 	eight	number count
+660	六つ 	むっつ 	num 	six	number count
+656		みんな 	adv, n 	all, everyone, everybody	people
+572	一人 	ひとり 	n 	one person	people
+589	二人 	ふたり 	n 	two people	people
+569	人 	ひと 	n 	man, person	people
+473	友達 	ともだち 	n 	friend	people
+495	名前 	なまえ 	n 	name	people
+124	大人 	おとな 	n 	adult	people
+102	大勢 	おおぜい 	n 	great number of people	people
+141	女 	おんな 	n 	woman, girl, daughter	people
+142	女の子 	おんなのこ 	n 	girl	people
+165	方 	かた 	n 	person	people
+120	男 	おとこ 	n 	man	people
+121	男の子 	おとこのこ 	n 	boy	people
+652	皆さん 	みなさん 	n 	everyone	people
+401	誕生日 	たんじょうび 	n 	birthday	people
+399	誰 	だれ 	n 	who	people
+400	誰か 	だれか 	n 	someone, somebody	people
+468		どなた 	n 	who	people
+147	会社 	かいしゃ 	n 	company, corporation	people occupation
+54	医者 	いしゃ 	n 	doctor (medical)	people occupation
+157	学生 	がくせい 	n 	student	people occupation
+348	生徒 	せいと 	n 	pupil	people occupation
+708	留学生 	りゅうがくせい 	n 	overseas student	people occupation
+218	薬 	くすり 	n 	medicine	people occupation
+235	警官 	けいかん 	n 	policeman	people occupation
+134		おまわりさん 	n 	policeman (friendly term)	people occupation
+661	村 	むら 	n	village	place
+198	喫茶店 	きっさてん 	n 	coffee lounge	place
+375	大使館 	たいしかん 	n 	embassy	place
+169	学校 	がっこう 	n 	school	place
+509	庭 	にわ 	n 	garden	place
+391	建物 	たてもの 	n 	building	place
+462	所 	ところ 	n 	place	place
+241	玄関 	げんかん 	n 	entrance-way, entry hall	place
+634	町 	まち 	n 	town, city	place
+603	辺 	へん 	n 	area, vicinity	place
+323	食堂 	しょくどう 	n 	cafeteria, dining hall	place
+583		プール 	n 	swimming pool	place
+613		ポスト 	n 	post	place
+33		アパート 	n, adv 	apartment (abbr)	place
+646	店 	みせ 	n, n-suf 	store, shop, establishment	place
+672	門 	もん 	n, n-suf 	gate	place
+247	交差点 	こうさてん 	n 	intersection	place city
+249	交番 	こうばん 	n 	police box	place city
+246	公園 	こうえん 	n 	(public) park	place city
+464	図書館 	としょかん 	n 	library	place city
+408	地下鉄 	ちかてつ 	n 	underground train, subway	place city
+374	大学 	だいがく 	n 	university	place city
+531	橋 	はし 	n 	bridge	place city
+575	病院 	びょういん 	n 	hospital	place city
+648	道 	みち 	n 	road, street	place city
+686	郵便局 	ゆうびんきょく 	n 	post office	place city
+215	銀行 	ぎんこう 	n 	bank	place city
+93	駅 	えき 	n 	station	place city
+438		デパート 	n 	department store	place city
+616		ホテル 	n 	hotel	place city
+99	多い 	おおい 	adj 	many	quantity
+334	少ない 	すくない 	adj 	a few, scarce	quantity
+52		いくら 	adv, n 	how much?, how many?	quantity
+414		ちょうど 	gn 	just, right, exactly	quantity
+385		たくさん 	na-adj, adv, n 	many, a lot, much	quantity
+37		あまり 	na-adj, adv, n, n-suf 	not very, not much	quantity
+228		～くらい/ぐらい 	suf 	approximate (quantity)	quantity
+678	安い 	やすい 	adj 	cheap, inexpensive	shop
+383	高い 	たかい 	adj 	expensive	shop
+95	～円 	～えん 	n 	yen (currency)	shop
+105	お金 	おかね 	n 	money	shop
+675	八百屋 	やおや 	n 	greengrocer	shop
+674	屋 	～や 	n 	～ shop	shop
+149	買い物 	かいもの 	n 	shopping	shop
+85	売る 	うる 	u-v 	to sell	shop
+150	買う 	かう 	u-v 	to buy	shop
+641	万年筆 	まんねんひつ 	n 	fountain pen	stationery
+199	切手 	きって 	n 	stamp (eg. postage)	stationery
+582	封筒 	ふうとう 	n 	envelope	stationery
+433	手紙 	てがみ 	n 	letter	stationery
+176	紙 	かみ 	n 	paper	stationery
+528	葉書 	はがき 	n 	postcard	stationery
+96	鉛筆 	えんぴつ 	n 	pencil	stationery
+517		ノート 	n 	notebook, exercise book	stationery
+604		ペン 	n 	pen	stationery
+609		ボールペン 	n 	ball-point pen	stationery
+677	易しい 	やさしい 	adj 	easy, plain, simple	study
+659	難しい 	むずかしい 	adj 	difficult	study
+281	作文 	さくぶん 	n 	composition, writing	study
+673	問題 	もんだい 	n 	problem, question	study
+306	字引 	じびき 	n 	dictionary	study
+319	宿題 	しゅくだい 	n 	homework	study
+577	平仮名 	ひらがな 	n 	hiragana	study
+617	本 	ほん 	n 	book	study
+189	漢字 	かんじ 	n 	kanji, Chinese character	study
+167	片仮名 	かたかな 	n 	katakana	study
+91	英語 	えいご 	n 	the English language	study
+263	言葉 	ことば 	n 	word	study
+298	辞書 	じしょ 	n 	dictionary	study
+598		ページ 	n 	page	study
+245	～語 	～ご 	n, n-suf 	word, language	study
+605	勉強 	べんきょう（する） 	n, vs 	study, diligence	study
+68	意味 	いみ 	n, vs 	meaning	study
+302	質問 	しつもん 	n, vs 	question, inquiry	study
+722	忘れる 	わすれる 	ru-v 	to forget	study verbs
+258	答える 	こたえる 	ru-v 	to answer, to reply	study verbs
+133	覚える 	おぼえる 	ru-v 	to remember, to memorize	study verbs
+597	文章 	ぶんしょう 	suf 	sentence, text	study verbs
+721	分かる 	わかる 	u-v 	to understand	study verbs
+156	書く 	かく 	u-v 	to write	study verbs
+324	知る 	しる 	u-v 	to know, to understand	study verbs
+496	習う 	ならう 	u-v 	to learn	study verbs
+59	一日 	いちにち 	n 	1 day (duration)	time
+295	時間 	じかん 	n-adv, n 	time	time
+201	昨日 	きのう 	n-adv, n-t 	yesterday	time
+625	毎日 	まいにち 	n-adv, n-t 	every day	time
+14		あさって 	n-adv, n-t 	day after tomorrow	time
+122		おととい 	n-adv, n-t 	day before yesterday	time
+270		～ころ/～ごろ 	n-suf 	about, approximately (time)	time
+205	今日 	きょう 	n-t 	today, this day	time
+16		あした 	n-t 	tomorrow	time
+458	～時 	～とき 	adv, n 	at the time of ～	time clock
+257	午前 	ごぜん 	n-adv, n-t 	morning, A.M.	time clock
+254	午後 	ごご 	n-adv, n-t 	afternoon, P.M.	time clock
+596	～分 	～ふん 	suf 	～minutes	time clock
+292	～時 	～じ 	suf 	time (～ O'clock)	time clock
+296	～時間 	～じかん 	suf 	～hours	time clock
+700	夜 	よる 	n 	evening, night	time day
+687	昨夜 	ゆうべ 	n 	last night	time day
+274	今晩 	こんばん 	n-adv, n-t 	tonight, this evening	time day
+684	夕方 	ゆうがた 	n-adv, n-t 	evening	time day
+578	昼 	ひる 	n-adv, n-t 	noon, daytime	time day
+555	晩 	ばん 	n-adv, n-t 	evening	time day
+12	朝 	あさ 	n-adv, n-t 	morning	time day
+627	毎晩 	まいばん 	n-adv, n-t 	every night	time day
+622	毎朝 	まいあさ 	n-adv, n-t 	every morning	time day
+236	今朝 	けさ 	n-temp 	this morning	time day
+416	一日 	ついたち 	n 	for one day, first of month	time month day
+649	三日 	みっか 	n 	three days, the third day (of the month)	time month day
+542	二十日 	はつか 	n 	twenty days, twentieth (day of the month)	time month day
+590	二日 	ふつか 	n 	second day of the month, two days	time month day
+62	五日 	いつか 	n 	five days, the fifth day (of the month)	time month day
+691	八日 	ようか 	n 	eight days, the eighth (day of the month)	time month day
+696	四日 	よっか 	n 	(1) 4th day of month, (2) four days	time month day
+494	七日 	なのか 	n-adv 	seven days, the seventh day (of the month)	time month day
+623	毎月 	まいげつ/まいつき 	n-adv, n 	every month, monthly	time month
+271	今月 	こんげつ 	n-adv, n-t 	this month	time month
+355	先月 	せんげつ 	n-adv, n-t 	last month	time month
+702	来月 	らいげつ 	n-adv, n-t 	next month	time month
+158	～か月 	～かげつ 	suf 	(number of) months	time month
+168	～月 	～がつ 	suf 	month of year	time month
+505	～日 	～にち 		～ day of the month, for ～ days	time month
+571	一月 	ひとつき 		one month	time month
+255	九日 	ここのか 		nine days, the ninth day (of the month)	time month
+657	六日 	むいか 		six days, sixth (day of month)	time month
+457	十日 	とおか 		ten days, the tenth (day of the month)	time month
+490	夏休み 	なつやすみ 	n 	summer vacation, summer holiday	time season
+8	秋 	あき 	n-adv 	autumn, fall	time season
+592	冬 	ふゆ 	n-adv, n-t 	winter	time season
+489	夏 	なつ 	n-adv, n-t 	summer	time season
+550	春 	はる 	n-adv, n-t 	spring	time season
+474	土曜日 	どようび 	n-adv, n 	Saturday	time week
+506	日曜日 	にちようび 	n-adv, n 	Sunday	time week
+240	月曜日 	げつようび 	n-adv, n 	Monday	time week
+667	木曜日 	もくようび 	n-adv, n 	Thursday	time week
+329	水曜日 	すいようび 	n-adv, n 	Wednesday	time week
+178	火曜日 	かようび 	n-adv, n 	Tuesday	time week
+216	金曜日 	きんようび 	n-adv, n 	Friday	time week
+272	今週 	こんしゅう 	n-adv, n-t 	this week	time week
+356	先週 	せんしゅう 	n-adv, n-t 	last week, the week before	time week
+624	毎週 	まいしゅう 	n-adv, n-t 	every week	time week
+317	～週間 	～しゅうかん 	suf 	～weeks	time week
+703	来週 	らいしゅう 		next week	time week
+539	二十歳 	はたち 	n 	20 years old, 20th year	time year
+463	年 	とし 	n 	year, age	time year
+287	さ来年 	さらいねん 	n-adv, n-t 	year after next	time year
+262	今年 	ことし 	n-adv, n-t 	this year	time year
+208	去年 	きょねん 	n-adv, n-t 	last year	time year
+704	来年 	らいねん 	n-adv, n-t 	next year	time year
+123		おととし 	n-adv, n-t 	year before last	time year
+626	毎年 	まいねん/まいとし 	n-t 	every year, annually	time year
+276	～歳 	～さい 	suf 	～years-old	time year
+516	～年 	～ねん 		～ years	time year
+71	入口 	いりぐち 	n 	entrance, gate	transport
+435	出口 	でぐち 	n 	exit	transport
+200	切符 	きっぷ 	n 	ticket	transport
+304	自動車 	じどうしゃ 	n 	automobile	transport
+303	自転車 	じてんしゃ 	n 	bicycle	transport
+507	荷物 	にもつ 	n 	luggage	transport
+232	車 	くるま 	n 	car, vehicle	transport
+444	電車 	でんしゃ 	n 	electric train	transport
+567	飛行機 	ひこうき 	n 	aeroplane, airplane	transport
+94		エレベーター 	n 	elevator	transport
+386		タクシー 	n 	taxi	transport
+537		バス 	n 	bus	transport
+290	散歩 	さんぽ（する） 	n, vs 	walk, stroll	transport
+711	旅行 	りょこう 	n, vs 	travel, trip	transport
+432	出かける 	でかける 	ru-v 	to depart, to go out	transport verb
+440	出る 	でる 	ru-v 	to appear, to leave	transport verb
+193	消える 	きえる 	ru-v 	to go out, to vanish	transport verb
+138	降りる 	おりる 	ru-v 	to alight (eg from bus), to get off	transport verb
+521	乗る 	のる 	u-v 	to get on, to ride in, to board	transport verb
+527	入る 	はいる 	u-v 	to enter, to contain, to hold	transport verb
+152	帰る 	かえる 	u-v 	to go home, to return	transport verb
+43	歩く 	あるく 	u-v 	to walk	transport verb
+518	登る 	のぼる 	u-v 	to climb	transport verb
+420	着く 	つく 	u-v 	to arrive at, to reach	transport verb
+50	行く 	いく/ゆく 	u-v 	to go	transport verb
+536	走る 	はしる 	u-v 	to run	transport verb
+471	飛ぶ 	とぶ 	u-v 	to fly, to hop	transport verb
+231	来る 	くる 	vk 	to come	transport verb
+2	会う 	あう 	u-v 	to meet, to see	verb01
+343	住む 	すむ 	u-v 	to reside, to live in	verb01
+72	居る 	いる 	u-v 	(hum) to be (animate), to exist	verb01
+635	待つ 	まつ 	u-v 	to wait	verb01
+47	言う 	いう 	u-v 	to say	verb01
+546	話す 	はなす 	u-v 	to speak	verb01
+683		やる 	u-v 	to do	verb01
+41		ある [存在] 	u-v-i 	to be	verb01
+42		ある [所有] 	u-v-i 	to have	verb01
+345		する 	vs-i 	to do, to try	verb01
+10	開ける 	あける 	ru-v 	to open	verb02
+309	閉める 	しめる 	ru-v, vt 	to close, to shut	verb02
+423		つける 	ru-v, vt 	to turn on (eg a light)	verb02
+417	使う 	つかう 	u-v 	to use	verb02
+477	取る 	とる 	u-v 	to take	verb02
+564	引く 	ひく 	u-v 	to pull	verb02
+533	始まる 	はじまる 	u-v, vi 	to begin	verb02
+308	閉まる 	しまる 	u-v, vi 	to close, to be closed	verb02
+9	開く 	あく 	u-v, vi 	to open, to become open	verb02
+114	押す 	おす 	u-v, vt 	to push, to press	verb02
+267		コピー・する 	n, p-suru 	to copy	verb03
+11	上げる 	あげる 	ru-v 	to give	verb03
+181	借りる 	かりる 	ru-v 	to borrow, to have a loan	verb03
+74	入れる 	いれる 	ru-v 	to put in	verb03
+268	困る 	こまる 	u-v 	to be worried, to be bothered	verb03
+282	差す 	さす 	u-v 	to raise (stretch out) hands, to raise (eg umbrella)	verb03
+346	座る 	すわる 	u-v 	to sit	verb03
+237	消す 	けす 	u-v 	to erase, to delete, to turn off power	verb03
+139	終る 	おわる 	u-v 	to finish, to close	verb03
+107	置く 	おく 	u-v 	to put, to place	verb03
+73	要る 	いる 	u-v 	to need	verb03
+162	貸す 	かす 	u-v 	to lend	verb03
+154		かかる 	u-v, vi 	to take (eg time,  money)	verb03
+151	返す 	かえす 	u-v, vt 	to return something	verb03
+716	練習 	れんしゅう（する） 	n, vs 	(to) practice	verb04
+418	疲れる 	つかれる 	ru-v 	to get tired, to tire	verb04
+498	並べる 	ならべる 	ru-v, vt 	to line up, to set up	verb04
+422	作る 	つくる 	u-v 	to make, to create	verb04
+387	出す 	だす 	u-v 	to put out, to send	verb04
+630	曲る 	まがる 	u-v 	to turn, to bend	verb04
+472	止まる 	とまる 	u-v 	to come to a halt	verb04
+725	渡す 	わたす 	u-v 	to pass over, to hand over	verb04
+726	渡る 	わたる 	u-v 	to cross over, to go across	verb04
+487	無くす 	なくす 	u-v 	to lose something	verb04
+389	立つ 	たつ 	u-v 	to stand	verb04
+551	貼る 	はる 	u-v 	to stick, to paste	verb04
+406	違う 	ちがう 	u-v 	to differ (from)	verb04
+499		なる 	u-v 	to become	verb04
+497	並ぶ 	ならぶ 	u-v, vi 	to line up, to stand in a line	verb04
+27	後 	あと 	adj-no, n 	afterwards, since then, in the future	when
+279	先 	さき 	adj-no, n, n-suf, pref 	the future, former, previous	when
+335		すぐ・に 	adv 	immediately, instantly	when
+665		もう 	adv, int 	already	when
+535	初めて 	はじめて 	adv, n 	for the first time	when
+459	時々 	ときどき 	adv, n 	sometimes	when
+65		いつも 	adv, n 	always, every time	when
+61		いつ 	gn-adv 	when	when
+316	～中 	～じゅう 	suf 	during, while	when
+413	～中 	～ちゅう 	suf 	during, while ～ing	when
+67	今 	いま 		now	when
+300	下 	した 	n 	under, below, beneath	where01
+483	中 	なか 	n 	inside, middle, among	where01
+643	右 	みぎ 	n 	right hand side	where01
+658	向こう 	むこう 	n 	beyond, over there	where01
+366	外 	そと 	n 	outside,  exterior	where01
+568	左 	ひだり 	n 	left hand side	where01
+78	後ろ 	うしろ 	n 	behind, rear	where01
+695	横 	よこ 	n 	beside, side, width	where01
+469	隣 	となり 	n 	next to, next door to	where01
+407	近く 	ちかく 	n-adv, n 	near	where01
+628	前 	まえ 	n-adv, n-t, suf 	before, in front	where01
+77	上 	うえ 	no-adj, n-adv, n, n-suf 	above, on top of	where01
+629	～前 	～まえ 	suf 	in front of ～	where01
+17		あそこ 	n 	there, over there, that place	where02
+22		あちら 	n 	there, yonder, that	where02
+253		ここ 	n 	here, this place	where02
+259		こちら 	n 	this eg person,  way	where02
+260		こっち 	n 	this eg person,  way	where02
+363		そこ 	n 	that place, there	where02
+364		そちら 	n 	over there	where02
+365		そっち 	n 	over there	where02
+368		そば 	n 	near, close, beside	where02
+461		どこ 	n 	where, what place	where02
+465		どちら 	n 	which, which way	where02
+466		どっち 	n 	which one, which way	where02
+26		あっち 	n col 	over there	where02
+562	東 	ひがし 	n 	east	where03
+504	西 	にし 	n 	west	where03
+653	南 	みなみ 	n, vs 	South, proceeding south	where03
+195	北 	きた 		north	where03
+56	忙しい 	いそがしい 	adj 	busy, irritated	work
+297	仕事 	しごと 	adj-no, n 	work, occupation, employment	work
+679	休み 	やすみ 	n 	rest, vacation, holiday	work
+573	暇 	ひま 	na-adj, n 	free time, leisure	work
+424	勤める 	つとめる 	ru-v 	to serve, to work (for)	work
+540	働く 	はたらく 	u-v 	to work	work
+680	休む 	やすむ 	u-v, vi 	to rest, to have a break, to take a day off	work
