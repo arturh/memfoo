@@ -16,6 +16,11 @@ public class MainActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
+		
+		if (!getSharedPreferences("memfoo.sharedpreferences", 0)
+				.getBoolean("POPULATED_DATABASE", false)) {
+			startActivity(new Intent(this, PopulateDatabaseActivity.class));
+		}
 	}
 
 	public void startCardTestActivity(View v) {

@@ -68,61 +68,19 @@ public class CardTestActivity extends Activity implements OnCompletionListener {
 		btnKana = (Button) findViewById(R.id.btnKana);
 		tvMeaning = (TextView) findViewById(R.id.tvMeaning);
 
-		DevOpenHelper helper = new DaoMaster.DevOpenHelper(this, "memfoo-db",
-				null);
+		DevOpenHelper helper = new DaoMaster.DevOpenHelper(
+				this, "memfoo-db", null);
 
 		db = helper.getWritableDatabase();
 		daoMaster = new DaoMaster(db);
 		daoSession = daoMaster.newSession();
 		
 		cardDao = daoSession.getCardDao();
-		
-		if (cardDao.loadAll().size() < 600) {
-			try {
-				populateDatabase();
-			} catch (Exception e) {
-				Log.e("MEMFOO", e.toString());
-				finish();
-			}
-		}
 
 		loadNext();
 	}
 
-	private void populateDatabase() throws IOException {
-		BufferedReader in = new BufferedReader(new InputStreamReader(
-			getAssets().open("jlptn5.tsv")));
-		
-		String line;
-		while ((line = in.readLine()) != null) {
-			if (line.charAt(0) == '#') continue;
-			if (line.charAt(0) == ' ') continue;
-			Card newCard = null;
-			try {
-				String[] parts = line.split("\t");
-				String id = parts[0];
-				String kanji = parts[1];
-				String kana = parts[2];
-				String grammar = parts[3];
-				String meaning = parts[4];
-				String lesson = parts[5];
-				String audio = parts[6];
-				
-				int lesson_index = Card.lessons.indexOf(lesson);
-				if (lesson_index < 0) {
-					Log.e("MEMFOO", "Lesson not found: " + lesson);
-					lesson_index = 9999;
-				}
-				
-				newCard = new Card(
-						null, kanji, kana, meaning, audio, null, null, 0, lesson_index);
-					
-			} catch (Exception e) {
-				Log.e("MEMFOO", "line not parsed:" + line);
-			}
-			cardDao.insert(newCard);
-		}
-	}
+
 
 	public void showBack(View v) {
 		btnKana.setVisibility(View.VISIBLE);
