@@ -18,9 +18,7 @@ local.properties
 
 *.pyc
 
-maketsv/jlptn5.tsv
 maketsv/audio/*
-Memfoo/res/raw/*.mp3
 
 .DS_Store
 *.swp

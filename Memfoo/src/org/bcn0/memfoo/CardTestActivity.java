@@ -18,6 +18,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.AssetFileDescriptor;
 import android.database.sqlite.SQLiteDatabase;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
@@ -205,13 +206,26 @@ public class CardTestActivity extends Activity implements OnCompletionListener {
 
 	public void playKana(View v) {
 		try {
-			Uri uri = Uri.parse("android.resource://org.bcn0.memfoo/raw/"
-					+ this.currentCard.getAudio());
-			MediaPlayer mp = MediaPlayer.create(this, uri);
+			AssetFileDescriptor afd = getAssets().openFd(
+					currentCard.getAudio() + ".mp3");
+			MediaPlayer mp = new MediaPlayer();
+			mp.setDataSource(
+				afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
+			mp.prepare();
 			mp.start();
 			mp.setOnCompletionListener(this);
-		} catch (Exception e) {
-			Log.i("MemFoo", e.toString());
+		} 
+		catch (IllegalStateException e) {
+		    Log.d("MEMFOO", "IllegalStateException: " + e.getMessage());
+		}
+		catch (IOException e) {
+		    Log.d("MEMFOO", "IOException: " + e.getMessage());
+		}
+		catch (IllegalArgumentException e) {
+		    Log.d("MEMFOO", "IllegalArgumentException: " + e.getMessage());
+		}
+		catch (SecurityException e) {
+		    Log.d("MEMFOO", "SecurityException: " + e.getMessage());
 		}
 	}
 

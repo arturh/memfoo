@@ -1,0 +1,4 @@
+# Ignore everything in this directory
+*.mp3
+# Except this file
+!.gitignore
