@@ -17,3 +17,5 @@ local.properties
 
 
 *.pyc
+
+maketsv/jlptn5.tsv
