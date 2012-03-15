@@ -9,6 +9,9 @@ import android.os.Bundle;
 import android.view.View;
 
 public class MainActivity extends Activity {
+	private static final int POPULATE_DATABASE_REQUEST_CODE = 477;
+	static final String SHARED_PREFERENCES_NAME = "memfoo.sharedpreferences";
+	static final String POPULATED_DATABASE = "POPULATED_DATABASE";
 	/** Called when the activity is first created. */
 	SQLiteDatabase db;
 
@@ -17,9 +20,19 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 		
-		if (!getSharedPreferences("memfoo.sharedpreferences", 0)
-				.getBoolean("POPULATED_DATABASE", false)) {
-			startActivity(new Intent(this, PopulateDatabaseActivity.class));
+		if (!getSharedPreferences(SHARED_PREFERENCES_NAME, 0)
+				.getBoolean(POPULATED_DATABASE, false)) {
+			startActivityForResult(
+				new Intent(this, PopulateDatabaseActivity.class), POPULATE_DATABASE_REQUEST_CODE);
+		}
+	}
+	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		if (requestCode == POPULATE_DATABASE_REQUEST_CODE) {
+			if (resultCode == RESULT_CANCELED) {
+				finish();
+			}
 		}
 	}
 
