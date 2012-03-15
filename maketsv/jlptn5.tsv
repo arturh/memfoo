@@ -8,7 +8,7 @@
 720	若い	わかい	adj	young	adjective01	wakai
 549	速い	はやい	adj	quick, fast	adjective01	hayai
 115	遅い	おそい	adj	late, slow	adjective01	osoi
-45		いい/よい	adj	good	adjective01	ii/yoi
+45		いい/よい	adj	good	adjective01	iiyoi
 86		うるさい	adj	noisy, loud, annoying	adjective01	urusai
 101	大きな	おおきな	na-adj	big	adjective01	ookina
 404	小さな	ちいさな	na-adj	small, little	adjective01	chiisana
@@ -41,7 +41,7 @@
 580	広い	ひろい	adj	spacious, wide	adjective04	hiroi
 392	楽しい	たのしい	adj	enjoyable, fun	adjective04	tanoshii
 188		かわいい	adj	cute, charming	adjective04	kawaii
-690		ゆっくり・と	adv, n	slowly, at ease	adjective04	yukkuri・to
+690		ゆっくり・と	adv, n	slowly, at ease	adjective04	yukkurito
 347	背	せい	n	height, stature	adjective04	sei
 381		たいへん	na-adj, adv, n	difficult situation, tough situation	adjective04	taihen
 606	便利	べんり	na-adj, n	convenient, handy	adjective04	benri
@@ -122,18 +122,18 @@
 3	青	あお	n	blue	color	ao
 191	黄色	きいろ	n	yellow	color	kiiro
 233	黒	くろ	n	black	color	kuro
-283	～冊	～さつ	n	counter for books	counter	～satsu
-143	～回	～かい	n	counter for occurrences	counter	～kai
-525	～杯	～はい	n	counter for cupfuls	counter	～hai
-144	～階	～かい	n	counter for storeys of a building	counter	～kai
-447	～度	～ど	n-suf	counter for occurrences	counter	～do
-327	～人	～にん	n, suf	counter for people	counter	～nin
-243	～個	～こ	n, suf	counter for small items	counter	～ko
-373	～台	～だい	suf	counter for vehicles/machines	counter	～dai
-510	～人	～にん		counter for people	counter	～nin
-563	～匹	～ひき		counter for small animals	counter	～hiki
-618	～本	～ほん		counter for long cylindrical things	counter	～hon
-621	～枚	～まい		counter for flat things	counter	～mai
+283	～冊	～さつ	n	counter for books	counter	satsu
+143	～回	～かい	n	counter for occurrences	counter	kai
+525	～杯	～はい	n	counter for cupfuls	counter	hai
+144	～階	～かい	n	counter for storeys of a building	counter	kai
+447	～度	～ど	n-suf	counter for occurrences	counter	do
+327	～人	～にん	n, suf	counter for people	counter	nin
+243	～個	～こ	n, suf	counter for small items	counter	ko
+373	～台	～だい	suf	counter for vehicles/machines	counter	dai
+510	～人	～にん		counter for people	counter	nin
+563	～匹	～ひき		counter for small animals	counter	hiki
+618	～本	～ほん		counter for long cylindrical things	counter	hon
+621	～枚	～まい		counter for flat things	counter	mai
 645	水	みず	n	water	drink	mizu
 204	牛乳	ぎゅうにゅう	n	milk	drink	gyuuniyuu
 285	砂糖	さとう	n	sugar	drink	satou
@@ -148,13 +148,13 @@
 454		どうも	adv, int	thanks, very	etiquette	doumo
 668		もしもし	conj, int	hello (on phone)	etiquette	moshimoshi
 219		ください	kana only	(with te-form verb) please do for me	etiquette	kudasai
-97		お～	prefix	honourable ～ (honorific)	etiquette	o～
-288		～さん	suf	Mr or Mrs	etiquette	～san
+97		お～	prefix	honourable ～ (honorific)	etiquette	o
+288		～さん	suf	Mr or Mrs	etiquette	san
 698	呼ぶ	よぶ	u-v	to call out, to invite	etiquette	yobu
-239	結婚	けっこん（する）	adj-no, n, vs	marriage	family	kekkon（suru）
+239	結婚	けっこん（する）	adj-no, n, vs	marriage	family	kekkonsuru
 709	両親	りょうしん	n	parents, both parents	family	ryoushin
 129	伯母さん/叔母さん	おばさん	n	aunt	family	obasan
-111	伯父/叔父・さん	おじ・さん	n	uncle, middle aged man	family	oji・san
+111	伯父/叔父・さん	おじ・さん	n	uncle, middle aged man	family	ojisan
 29	兄	あに	n	(hum) older brother	family	ani
 207	兄弟	きょうだい	n	siblings (brothers and sisters)	family	kyoudai
 69	妹	いもうと	n	younger sister	family	imouto
@@ -206,7 +206,7 @@
 82		うち	n	house (one's own)	home	uchi
 155		かぎ	n	key/s	home	kagi
 48	家	いえ	suf	house, family	home	ie
-361	掃除	そうじ（する）	n, vs	cleaning, sweeping	home activity	souji（suru）
+361	掃除	そうじ（する）	n, vs	cleaning, sweeping	home activity	soujisuru
 358	洗濯	せんたく	n, vs	washing, laundry	home activity	sentaku
 515	寝る	ねる	ru-v	to go to bed, to sleep	home activity	neru
 106	起きる	おきる	ru-v	to get up, to rise	home activity	okiru
@@ -270,8 +270,8 @@
 230		グラム	n	gram	measure	guramu
 390		たて	n	length, height	measure	tate
 663		メートル	n	metre, meter	measure	me_toru
-213		キロ/キログラム	n, pref	kilo (kilogram)	measure	kiro/kiroguramu
-214		キロ/キロメートル	n, pref	kilo (kilometre)	measure	kiro/kirome_toru
+213		キロ/キログラム	n, pref	kilo (kilogram)	measure	kirokiroguramu
+214		キロ/キロメートル	n, pref	kilo (kilometre)	measure	kirokirome_toru
 328	新聞	しんぶん	n	newspaper	media	shinbun
 89	映画	えいが	n	movie, film	media	eiga
 90	映画館	えいがかん	n	movie theatre (theater), cinema	media	eigakan
@@ -294,7 +294,7 @@
 723	私	わたし	adj-no, n	I, myself	misc01	watashi
 63	一緒	いっしょ	adv, n	together	misc01	itsusho
 534	初め/始め	はじめ	expr	beginning, start	misc01	hajime
-493	何	なん/なに	int, n	what	misc01	nan/nani
+493	何	なん/なに	int, n	what	misc01	nannani
 224	国	くに	n	country	misc01	kuni
 409	地図	ちず	n	map	misc01	chizu
 250	声	こえ	n	voice	misc01	koe
@@ -302,15 +302,15 @@
 28		あなた	n	you	misc01	anata
 359	全部	ぜんぶ	n-adv, n-t	all, entire, whole	misc01	zenbu
 554	半	はん	n-adv, n, n-suf	half	misc01	han
-187	側	～がわ	n-suf	～ side	misc01	～gawa
+187	側	～がわ	n-suf	～ side	misc01	gawa
 126	同じ	おなじ	na-adj, n	same, identical, similar	misc01	onaji
-500	何～	なん～		what sort of ～	misc01	nan～
+500	何～	なん～		what sort of ～	misc01	nan
 561	半分	はんぶん		half	misc01	hanbun
 612	欲しい	ほしい	adj	want, in need of, desire	misc02	hoshii
 336	少し	すこし	adv, n	little, few	misc02	sukoshi
 294		しかし	conj	however, but	misc02	shikashi
-362		そうして/そして	conj	and, like that	misc02	soushite/soshite
-311		じゃ/じゃあ	conj, int	well, well then	misc02	jiya/jiyaa
+362		そうして/そして	conj	and, like that	misc02	soushitesoshite
+311		じゃ/じゃあ	conj, int	well, well then	misc02	jiyajiyaa
 439		でも	conj, prt	but, however	misc02	demo
 372		それでは	exp	in that situation, well then...	misc02	soredeha
 610	外	ほか	n	other place, the rest	misc02	hoka
@@ -349,8 +349,8 @@
 370		それ	n	it, that	misc05	sore
 479		どれ	n	which (of three or more)	misc05	dore
 581		フィルム	n	film (roll of)	misc05	fuirumu
-388		～たち	n-suf	plural suffix	misc05	～tachi
-491		～など	n, n-suf, prt	et cetera	misc06	～nado
+388		～たち	n-suf	plural suffix	misc05	tachi
+491		～など	n, n-suf, prt	et cetera	misc06	nado
 76		いろいろ	na-adj, adj-no, adv, n	various	misc06	iroiro
 273		こんな	na-adj, adj-pn, adv, n	such, like this	misc06	konna
 480		どんな	na-adj, adj-pn, n	what, what kind of	misc06	donna
@@ -359,15 +359,15 @@
 636		まっすぐ	na-adj, adv, n	straight (ahead), direct	misc06	matsusugu
 31		あの	pren-adj	that over there	misc06	ano
 470		どの	pren-adj	which	misc06	dono
-384		～だけ	prt	only ～, just ～	misc06	～dake
-485		～ながら	prt	while ~ing, during, although	misc06	～nagara
+384		～だけ	prt	only ～, just ～	misc06	dake
+485		～ながら	prt	while ~ing, during, although	misc06	nagara
 434		できる	ru-v	to be able to	misc07	dekiru
-182		～がる	suf	feel	misc07	～garu
-333		～すぎ	suf	to exceed, ～ too much	misc07	～sugi
-338		～ずつ	suf	at a time, gradually	misc07	～zutsu
+182		～がる	suf	feel	misc07	garu
+333		～すぎ	suf	to exceed, ～ too much	misc07	sugi
+338		～ずつ	suf	at a time, gradually	misc07	zutsu
 371		それから	uk	and then, after that	misc07	sorekara
 607		ほう		way	misc07	hou
-360		そう/そうです		appears, to be the case	misc07	sou/soudesu
+360		そう/そうです		appears, to be the case	misc07	sousoudesu
 225	曇り	くもり	adv	cloudiness, cloudy weather	nature	kumori
 453	動物	どうぶつ	n	animal	nature	doubutsu
 682	山	やま	n	mountain	nature	yama
@@ -397,7 +397,7 @@
 712	零	れい	n	zero, nought	number	rei
 353		ゼロ	n	zero	number	zero
 60		いちばん	n-adv	best, first, number one	number	ichiban
-556	～番	～ばん	n-adv, n-t	～st/th best	number	～ban
+556	～番	～ばん	n-adv, n-t	～st/th best	number	ban
 58	一	いち	num	one	number	ichi
 301	七	しち	num	seven	number	shichi
 289	三	さん	num	three	number	san
@@ -484,13 +484,13 @@
 414		ちょうど	gn	just, right, exactly	quantity	choudo
 385		たくさん	na-adj, adv, n	many, a lot, much	quantity	takusan
 37		あまり	na-adj, adv, n, n-suf	not very, not much	quantity	amari
-228		～くらい/ぐらい	suf	approximate (quantity)	quantity	～kurai/gurai
+228		～くらい/ぐらい	suf	approximate (quantity)	quantity	kuraigurai
 678	安い	やすい	adj	cheap, inexpensive	shop	yasui
 383	高い	たかい	adj	expensive	shop	takai
-95	～円	～えん	n	yen (currency)	shop	～en
+95	～円	～えん	n	yen (currency)	shop	en
 105	お金	おかね	n	money	shop	okane
 675	八百屋	やおや	n	greengrocer	shop	yaoya
-674	屋	～や	n	～ shop	shop	～ya
+674	屋	～や	n	～ shop	shop	ya
 149	買い物	かいもの	n	shopping	shop	kaimono
 85	売る	うる	u-v	to sell	shop	uru
 150	買う	かう	u-v	to buy	shop	kau
@@ -518,8 +518,8 @@
 263	言葉	ことば	n	word	study	kotoba
 298	辞書	じしょ	n	dictionary	study	jisho
 598		ページ	n	page	study	pe_ji
-245	～語	～ご	n, n-suf	word, language	study	～go
-605	勉強	べんきょう（する）	n, vs	study, diligence	study	benkyou（suru）
+245	～語	～ご	n, n-suf	word, language	study	go
+605	勉強	べんきょう（する）	n, vs	study, diligence	study	benkyousuru
 68	意味	いみ	n, vs	meaning	study	imi
 302	質問	しつもん	n, vs	question, inquiry	study	shitsumon
 722	忘れる	わすれる	ru-v	to forget	study verbs	wasureru
@@ -536,15 +536,15 @@
 625	毎日	まいにち	n-adv, n-t	every day	time	mainichi
 14		あさって	n-adv, n-t	day after tomorrow	time	asatte
 122		おととい	n-adv, n-t	day before yesterday	time	ototoi
-270		～ころ/～ごろ	n-suf	about, approximately (time)	time	～koro/～goro
+270		～ころ/～ごろ	n-suf	about, approximately (time)	time	korogoro
 205	今日	きょう	n-t	today, this day	time	kyou
 16		あした	n-t	tomorrow	time	ashita
-458	～時	～とき	adv, n	at the time of ～	time clock	～toki
+458	～時	～とき	adv, n	at the time of ～	time clock	toki
 257	午前	ごぜん	n-adv, n-t	morning, A.M.	time clock	gozen
 254	午後	ごご	n-adv, n-t	afternoon, P.M.	time clock	gogo
-596	～分	～ふん	suf	～minutes	time clock	～fun
-292	～時	～じ	suf	time (～ O'clock)	time clock	～ji
-296	～時間	～じかん	suf	～hours	time clock	～jikan
+596	～分	～ふん	suf	～minutes	time clock	fun
+292	～時	～じ	suf	time (～ O'clock)	time clock	ji
+296	～時間	～じかん	suf	～hours	time clock	jikan
 700	夜	よる	n	evening, night	time day	yoru
 687	昨夜	ゆうべ	n	last night	time day	yuube
 274	今晩	こんばん	n-adv, n-t	tonight, this evening	time day	konban
@@ -563,13 +563,13 @@
 691	八日	ようか	n	eight days, the eighth (day of the month)	time month day	youka
 696	四日	よっか	n	(1) 4th day of month, (2) four days	time month day	yokka
 494	七日	なのか	n-adv	seven days, the seventh day (of the month)	time month day	nanoka
-623	毎月	まいげつ/まいつき	n-adv, n	every month, monthly	time month	maigetsu/maitsuki
+623	毎月	まいげつ/まいつき	n-adv, n	every month, monthly	time month	maigetsumaitsuki
 271	今月	こんげつ	n-adv, n-t	this month	time month	kongetsu
 355	先月	せんげつ	n-adv, n-t	last month	time month	sengetsu
 702	来月	らいげつ	n-adv, n-t	next month	time month	raigetsu
-158	～か月	～かげつ	suf	(number of) months	time month	～kagetsu
-168	～月	～がつ	suf	month of year	time month	～gatsu
-505	～日	～にち		～ day of the month, for ～ days	time month	～nichi
+158	～か月	～かげつ	suf	(number of) months	time month	kagetsu
+168	～月	～がつ	suf	month of year	time month	gatsu
+505	～日	～にち		～ day of the month, for ～ days	time month	nichi
 571	一月	ひとつき		one month	time month	hitotsuki
 255	九日	ここのか		nine days, the ninth day (of the month)	time month	kokonoka
 657	六日	むいか		six days, sixth (day of month)	time month	muika
@@ -589,7 +589,7 @@
 272	今週	こんしゅう	n-adv, n-t	this week	time week	konshuu
 356	先週	せんしゅう	n-adv, n-t	last week, the week before	time week	senshuu
 624	毎週	まいしゅう	n-adv, n-t	every week	time week	maishuu
-317	～週間	～しゅうかん	suf	～weeks	time week	～shuukan
+317	～週間	～しゅうかん	suf	～weeks	time week	shuukan
 703	来週	らいしゅう		next week	time week	raishuu
 539	二十歳	はたち	n	20 years old, 20th year	time year	hatachi
 463	年	とし	n	year, age	time year	toshi
@@ -598,9 +598,9 @@
 208	去年	きょねん	n-adv, n-t	last year	time year	kyonen
 704	来年	らいねん	n-adv, n-t	next year	time year	rainen
 123		おととし	n-adv, n-t	year before last	time year	ototoshi
-626	毎年	まいねん/まいとし	n-t	every year, annually	time year	mainen/maitoshi
-276	～歳	～さい	suf	～years-old	time year	～sai
-516	～年	～ねん		～ years	time year	～nen
+626	毎年	まいねん/まいとし	n-t	every year, annually	time year	mainenmaitoshi
+276	～歳	～さい	suf	～years-old	time year	sai
+516	～年	～ねん		～ years	time year	nen
 71	入口	いりぐち	n	entrance, gate	transport	iriguchi
 435	出口	でぐち	n	exit	transport	deguchi
 200	切符	きっぷ	n	ticket	transport	kippu
@@ -613,7 +613,7 @@
 94		エレベーター	n	elevator	transport	erebe_ta_
 386		タクシー	n	taxi	transport	takushi_
 537		バス	n	bus	transport	basu
-290	散歩	さんぽ（する）	n, vs	walk, stroll	transport	sanpo（suru）
+290	散歩	さんぽ（する）	n, vs	walk, stroll	transport	sanposuru
 711	旅行	りょこう	n, vs	travel, trip	transport	ryokou
 432	出かける	でかける	ru-v	to depart, to go out	transport verb	dekakeru
 440	出る	でる	ru-v	to appear, to leave	transport verb	deru
@@ -625,7 +625,7 @@
 43	歩く	あるく	u-v	to walk	transport verb	aruku
 518	登る	のぼる	u-v	to climb	transport verb	noboru
 420	着く	つく	u-v	to arrive at, to reach	transport verb	tsuku
-50	行く	いく/ゆく	u-v	to go	transport verb	iku/yuku
+50	行く	いく/ゆく	u-v	to go	transport verb	ikuyuku
 536	走る	はしる	u-v	to run	transport verb	hashiru
 471	飛ぶ	とぶ	u-v	to fly, to hop	transport verb	tobu
 231	来る	くる	vk	to come	transport verb	kuru
@@ -636,8 +636,8 @@
 47	言う	いう	u-v	to say	verb01	iu
 546	話す	はなす	u-v	to speak	verb01	hanasu
 683		やる	u-v	to do	verb01	yaru
-41		ある [存在]	u-v-i	to be	verb01	aru [存在]
-42		ある [所有]	u-v-i	to have	verb01	aru [所有]
+41		ある [存在]	u-v-i	to be	verb01	aru
+42		ある [所有]	u-v-i	to have	verb01	aru
 345		する	vs-i	to do, to try	verb01	suru
 10	開ける	あける	ru-v	to open	verb02	akeru
 309	閉める	しめる	ru-v, vt	to close, to shut	verb02	shimeru
@@ -649,7 +649,7 @@
 308	閉まる	しまる	u-v, vi	to close, to be closed	verb02	shimaru
 9	開く	あく	u-v, vi	to open, to become open	verb02	aku
 114	押す	おす	u-v, vt	to push, to press	verb02	osu
-267		コピー・する	n, p-suru	to copy	verb03	kopi_・suru
+267		コピー・する	n, p-suru	to copy	verb03	kopi_suru
 11	上げる	あげる	ru-v	to give	verb03	ageru
 181	借りる	かりる	ru-v	to borrow, to have a loan	verb03	kariru
 74	入れる	いれる	ru-v	to put in	verb03	ireru
@@ -663,7 +663,7 @@
 162	貸す	かす	u-v	to lend	verb03	kasu
 154		かかる	u-v, vi	to take (eg time,  money)	verb03	kakaru
 151	返す	かえす	u-v, vt	to return something	verb03	kaesu
-716	練習	れんしゅう（する）	n, vs	(to) practice	verb04	renshuu（suru）
+716	練習	れんしゅう（する）	n, vs	(to) practice	verb04	renshuusuru
 418	疲れる	つかれる	ru-v	to get tired, to tire	verb04	tsukareru
 498	並べる	ならべる	ru-v, vt	to line up, to set up	verb04	naraberu
 422	作る	つくる	u-v	to make, to create	verb04	tsukuru
@@ -680,14 +680,14 @@
 497	並ぶ	ならぶ	u-v, vi	to line up, to stand in a line	verb04	narabu
 27	後	あと	adj-no, n	afterwards, since then, in the future	when	ato
 279	先	さき	adj-no, n, n-suf, pref	the future, former, previous	when	saki
-335		すぐ・に	adv	immediately, instantly	when	sugu・ni
+335		すぐ・に	adv	immediately, instantly	when	suguni
 665		もう	adv, int	already	when	mou
 535	初めて	はじめて	adv, n	for the first time	when	hajimete
 459	時々	ときどき	adv, n	sometimes	when	tokidoki
 65		いつも	adv, n	always, every time	when	itsumo
 61		いつ	gn-adv	when	when	itsu
-316	～中	～じゅう	suf	during, while	when	～jiyuu
-413	～中	～ちゅう	suf	during, while ～ing	when	～chuu
+316	～中	～じゅう	suf	during, while	when	jiyuu
+413	～中	～ちゅう	suf	during, while ～ing	when	chuu
 67	今	いま		now	when	ima
 300	下	した	n	under, below, beneath	where01	shita
 483	中	なか	n	inside, middle, among	where01	naka
@@ -701,7 +701,7 @@
 407	近く	ちかく	n-adv, n	near	where01	chikaku
 628	前	まえ	n-adv, n-t, suf	before, in front	where01	mae
 77	上	うえ	no-adj, n-adv, n, n-suf	above, on top of	where01	ue
-629	～前	～まえ	suf	in front of ～	where01	～mae
+629	～前	～まえ	suf	in front of ～	where01	mae
 17		あそこ	n	there, over there, that place	where02	asoko
 22		あちら	n	there, yonder, that	where02	achira
 253		ここ	n	here, this place	where02	koko

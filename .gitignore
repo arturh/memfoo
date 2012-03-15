@@ -19,3 +19,7 @@ local.properties
 *.pyc
 
 maketsv/jlptn5.tsv
+maketsv/audio/*
+
+.DS_Store
+*.swp
