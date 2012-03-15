@@ -3,11 +3,13 @@ import sys
 import os
 import codecs
 import csv
+import string
 
 from romaji import roma
 
 def roma2(s):
-   return roma(s).lower().replace("-", "_")
+   return ''.join([c for c in roma(s).lower().replace("-", "_")
+                           if c in string.lowercase + '_'])
 
 writer = csv.writer(sys.stdout, delimiter="\t")
 
