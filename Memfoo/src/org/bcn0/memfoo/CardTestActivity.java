@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -90,26 +91,30 @@ public class CardTestActivity extends Activity implements OnCompletionListener {
 	private void populateDatabase() throws IOException {
 		BufferedReader in = new BufferedReader(new InputStreamReader(
 			getAssets().open("jlptn5.tsv")));
+		
 		String line;
 		while ((line = in.readLine()) != null) {
-			Log.i("MEMFOO", "card insert: 0 ");
 			if (line.charAt(0) == '#') continue;
 			if (line.charAt(0) == ' ') continue;
 			Card newCard = null;
 			try {
 				String[] parts = line.split("\t");
+				String id = parts[0];
+				String kanji = parts[1];
+				String kana = parts[2];
+				String grammar = parts[3];
+				String meaning = parts[4];
+				String lesson = parts[5];
+				String audio = parts[6];
+				
+				int lesson_index = Card.lessons.indexOf(lesson);
+				if (lesson_index < 0) {
+					Log.e("MEMFOO", "Lesson not found: " + lesson);
+					lesson_index = 9999;
+				}
+				
 				newCard = new Card(
-						/* id         */ null,
-						/* kanji      */ parts[0],
-						/* kana       */ parts[1],
-						/* meaning    */ parts[2],
-						/* audio      */ parts[3],
-						/* due        */ null,
-						/* introduced */ null,
-						/* correct    */ 0,
-						/* lesson     */ "lesson"
-				);
-				Log.i("MEMFOO", "card insert: " + newCard.toString());
+						null, kanji, kana, meaning, audio, null, null, 0, lesson_index);
 					
 			} catch (Exception e) {
 				Log.e("MEMFOO", "line not parsed:" + line);
@@ -176,29 +181,13 @@ public class CardTestActivity extends Activity implements OnCompletionListener {
 		loadNext();
 	}
 
-	public List<Card> dueCards() {
-		
 
-		return cardDao.queryBuilder()
-				.where(Properties.Due.lt(new Date()))
-				.orderAsc(Properties.Due)
-				.list();
-	}
-
-	public List<Card> newCards() {
-		
-		return cardDao.queryBuilder()
-				.where(Properties.Introduced.isNull())
-				.orderAsc(Properties.Due)
-				.list();
-		
-	}
 
 	public void loadNext() {
-		if (dueCards().size() > 0) {
-			this.currentCard = dueCards().get(0);
+		if (Card.dueCards(cardDao).size() > 0) {
+			this.currentCard = Card.dueCards(cardDao).get(0);
 		} else {
-			this.currentCard = newCards().get(0);
+			this.currentCard = Card.newCards(cardDao).get(0);
 		}
 
 		if (currentCard.getKanji().equals("")) {

@@ -32,6 +32,7 @@ public class MemfooDaoGenerator {
 
    public static void main(String[] args) throws Exception {
        Schema schema = new Schema(1, "org.bcn0.memfoo");
+       schema.enableKeepSectionsByDefault();
 
        addCard(schema);
 
@@ -40,6 +41,8 @@ public class MemfooDaoGenerator {
 
    private static void addCard(Schema schema) {
        Entity card = schema.addEntity("Card");
+       card.setHasKeepSections(true);
+       
        card.addIdProperty();
        card.addStringProperty("kanji");
        card.addStringProperty("kana");
@@ -48,7 +51,7 @@ public class MemfooDaoGenerator {
        card.addDateProperty("due");
        card.addDateProperty("introduced");
        card.addIntProperty("correct");
-       card.addStringProperty("lesson");
+       card.addIntProperty("lesson");
    }
 
 }
