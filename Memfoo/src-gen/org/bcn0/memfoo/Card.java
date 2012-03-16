@@ -1,6 +1,7 @@
 package org.bcn0.memfoo;
 
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Date;
 
 
@@ -207,6 +208,18 @@ public class Card {
 				.orderAsc(Properties.Lesson)
 				.list();
 		
+	}
+	
+	public static int introducedToday(CardDao cardDao) {
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(new Date());
+		calendar.add(Calendar.HOUR, -24);
+		Date yesterday = calendar.getTime();
+		return cardDao.queryBuilder()
+				.where(Properties.Introduced.gt(yesterday))
+				.list()
+				.size();
+				
 	}
     // KEEP METHODS END
 
