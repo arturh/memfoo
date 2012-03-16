@@ -37,6 +37,7 @@ public class CardTestActivity extends Activity implements OnCompletionListener {
 	WebView wvFront, wvBack;
 	Button btnPlay;
 
+	private TextView tvStatus;
 	private TextView tvKanji;
 	private Button btnKana;
 	private TextView tvMeaning;
@@ -56,6 +57,8 @@ public class CardTestActivity extends Activity implements OnCompletionListener {
 
 		answerButtonsLayout = (LinearLayout) findViewById(R.id.linearLayout1);
 		btnShowAnswer = (Button) findViewById(R.id.btnShowBack);
+		
+		tvStatus = (TextView) findViewById(R.id.tvStatus);
 
 		tvKanji = (TextView) findViewById(R.id.tvKanji);
 		btnKana = (Button) findViewById(R.id.btnKana);
@@ -162,6 +165,7 @@ public class CardTestActivity extends Activity implements OnCompletionListener {
 		}
 
 		showFront(null);
+		updateStatus();
 	}
 
 	public void playKana(View v) {
@@ -247,5 +251,12 @@ public class CardTestActivity extends Activity implements OnCompletionListener {
 
 	@Override
 	public void onCompletion(MediaPlayer mp) {
+	}
+	
+	public void updateStatus() {
+		tvStatus.setText(
+				"due: " + Integer.toString(Card.dueCards(cardDao).size()) +	"    " +
+				"new: " + Integer.toString(Card.introducedToday(cardDao))
+				);
 	}
 }
