@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
     <string name="hello">Hello World</string>
-    <string name="app_name">MemFoo</string>
+    <string name="app_name">JLPT N5 Audio Flashcards</string>
+    <string name="description">Japanese JLPT N5 vocabulary audio flashcards with audio and speech recognition</string>
 </resources>
