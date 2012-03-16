@@ -85,8 +85,5 @@ public class SpeechActivity extends Activity {
 		editor.commit();
 		
 	}
-	
-	public void startMyMapActivity(View v) {
-		startActivity(new Intent(this, MyMapActivity.class));
-	}
+
 }

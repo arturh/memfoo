@@ -18,7 +18,6 @@
         <activity android:name=".CardGraphActivity" android:screenOrientation="landscape"/>
         <activity android:name=".CardListActivity"/>
         <activity android:name=".SpeechActivity"/>
-        <activity android:name=".MyMapActivity"/>
         <activity android:name=".PopulateDatabaseActivity"/>
     </application>
 </manifest>
