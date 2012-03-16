@@ -26,3 +26,4 @@ for line in open("jlptn5.tsv"):
          "-U", UA,
          "-O", audiofile,
          tts(kana, "ja")])
+    time.sleep(2)
