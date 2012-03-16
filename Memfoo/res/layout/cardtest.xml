@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/samurai"
     android:orientation="vertical" >
 
     <RelativeLayout
@@ -66,28 +65,31 @@
                 android:text="I forgot" />
         </LinearLayout>
 
+        <Button
+            android:id="@+id/btnKana"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tvKanji"
+            android:background="#aaaa"
+            android:onClick="playKana"
+            
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="かなおんがく"
+            android:textSize="15dp" />
+
         <TextView
             android:id="@+id/tvMeaning"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
+            android:layout_below="@+id/btnKana"
             android:background="#cfff"
             android:paddingTop="12sp"
             android:text="Large Text"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="#000" />
-
-        <Button
-            android:id="@+id/btnKana"
-            android:layout_width="wrap_content"
-            android:layout_height="44dp"
-            android:layout_alignBottom="@+id/tvKanji"
-            android:layout_alignParentRight="true"
-            android:background="#aaaa"
-            android:onClick="playKana"
-            android:text="かなおんがく"
-            android:textSize="15dp" android:paddingLeft="15dp" android:paddingRight="15dp"/>
 
     </RelativeLayout>
 

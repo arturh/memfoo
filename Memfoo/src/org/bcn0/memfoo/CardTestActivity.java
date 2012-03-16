@@ -1,18 +1,11 @@
 package org.bcn0.memfoo;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.List;
 
-import org.bcn0.memfoo.CardDao.Properties;
 import org.bcn0.memfoo.DaoMaster.DevOpenHelper;
-
-import de.greenrobot.dao.WhereCondition;
 
 import android.app.Activity;
 import android.content.Context;
@@ -22,12 +15,12 @@ import android.content.res.AssetFileDescriptor;
 import android.database.sqlite.SQLiteDatabase;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.speech.RecognizerIntent;
 import android.util.Log;
 import android.view.View;
+import android.view.View.OnLongClickListener;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -68,15 +61,24 @@ public class CardTestActivity extends Activity implements OnCompletionListener {
 		btnKana = (Button) findViewById(R.id.btnKana);
 		tvMeaning = (TextView) findViewById(R.id.tvMeaning);
 
-		DevOpenHelper helper = new DaoMaster.DevOpenHelper(
-				this, "memfoo-db", null);
+		DevOpenHelper helper =
+			new DaoMaster.DevOpenHelper(this, "memfoo-db", null);
 
 		db = helper.getWritableDatabase();
 		daoMaster = new DaoMaster(db);
 		daoSession = daoMaster.newSession();
 		
 		cardDao = daoSession.getCardDao();
+		
+		btnKana.setOnLongClickListener(new OnLongClickListener(){
 
+			@Override
+			public boolean onLongClick(View arg0) {
+				startVoiceRecognitionActivity();
+				return true;
+			}
+			
+		});
 		loadNext();
 	}
 
@@ -101,8 +103,8 @@ public class CardTestActivity extends Activity implements OnCompletionListener {
 	public void rememberCard(View v) {
 		// How long to wait after <correct> consecutive correct answers
 		// (seconds)
-		int[] correctToDue = { 90, 600, 6000, 6000, 6000, 6000, 6000, 6000,
-				6000 };
+		int[] correctToDue =
+			{ 90, 600, 6000, 6000, 6000, 6000, 6000, 6000, 6000 };
 		currentCard.setCorrect(currentCard.getCorrect() + 1);
 		
 		if (currentCard.getIntroduced() == null) {
@@ -215,6 +217,7 @@ public class CardTestActivity extends Activity implements OnCompletionListener {
 		intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "ja-JP");
 
 		startActivityForResult(intent, VOICE_RECOGNITION_REQUEST_CODE);
+		
 	}
 
 	/**
@@ -244,9 +247,5 @@ public class CardTestActivity extends Activity implements OnCompletionListener {
 
 	@Override
 	public void onCompletion(MediaPlayer mp) {
-		SharedPreferences sp = getSharedPreferences("memfoo.prefs",
-				MODE_PRIVATE);
-		if (sp.getBoolean("VOICE_RECOGNITION", false))
-			startVoiceRecognitionActivity();
 	}
 }
