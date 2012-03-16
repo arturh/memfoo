@@ -107,8 +107,14 @@ public class CardTestActivity extends Activity implements OnCompletionListener {
 		// How long to wait after <correct> consecutive correct answers
 		// (seconds)
 		int[] correctToDue =
-			{ 90, 600, 6000, 6000, 6000, 6000, 6000, 6000, 6000 };
-		currentCard.setCorrect(currentCard.getCorrect() + 1);
+			{ 90, 24*60*60, 2*24*60*60, 5*24*60*60, 12*24*60*60,
+				30*24*60*60, 45*24*60*60, 45*24*60*60, 45*24*60*60,
+				45*24*60*60, 45*24*60*60, 45*24*60*60, 45*24*60*60,
+				45*24*60*60, 45*24*60*60, 45*24*60*60, 45*24*60*60,
+				45*24*60*60, 45*24*60*60, 45*24*60*60, 45*24*60*60,
+				45*24*60*60, 45*24*60*60, 45*24*60*60, 45*24*60*60};
+		
+
 		
 		if (currentCard.getIntroduced() == null) {
 			currentCard.setIntroduced(new Date());
@@ -118,6 +124,8 @@ public class CardTestActivity extends Activity implements OnCompletionListener {
 		calendar.setTime(new Date());
 		calendar.add(Calendar.SECOND, correctToDue[currentCard.getCorrect()]);
 		currentCard.setDue(calendar.getTime());
+		
+		currentCard.setCorrect(currentCard.getCorrect() + 1);
 
 		cardDao.update(currentCard);
 
@@ -133,7 +141,7 @@ public class CardTestActivity extends Activity implements OnCompletionListener {
 		
 		Calendar calendar = Calendar.getInstance();
 		calendar.setTime(new Date());
-		calendar.add(Calendar.SECOND, 90);
+		calendar.add(Calendar.SECOND, 10);
 		currentCard.setDue(calendar.getTime());
 
 		cardDao.update(currentCard);
