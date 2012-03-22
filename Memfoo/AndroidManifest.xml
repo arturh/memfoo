@@ -33,6 +33,7 @@
             android:name=".CardGraphActivity"
             android:screenOrientation="landscape" />
         <activity android:name=".CardListActivity" />
+        <activity android:name=".LessonListActivity" />
         <activity android:name=".SpeechActivity" />
         <activity android:name=".PopulateDatabaseActivity" />
     </application>

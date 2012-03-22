@@ -12,25 +12,30 @@
         android:text="わたし"
         android:textSize="12pt" />
 
-    <TextView
-        android:id="@+id/tvKana"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="10"
-        android:ellipsize="end"
-        android:text="Large Text"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical" android:layout_weight="10">
 
+        <TextView
+            android:id="@+id/tvKana"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
 
-    <TextView
-        android:id="@+id/tvMeaning"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="20"
-        android:ellipsize="end"
-        android:lines="2"
-        android:text="Large Text"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        <TextView
+            android:id="@+id/tvMeaning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="2"
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/button1"

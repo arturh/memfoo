@@ -48,6 +48,10 @@ public class MainActivity extends Activity {
 		startActivity(new Intent(this, CardListActivity.class));
 	}
 	
+	public void startLessonListActivity(View v) {
+		startActivity(new Intent(this, LessonListActivity.class));
+	}
+	
 	public void startSpeechActivity(View v) {
 		startActivity(new Intent(this, SpeechActivity.class));
 	}

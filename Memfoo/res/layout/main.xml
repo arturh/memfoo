@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="10"
-        android:onClick="startCardListActivity"
+        android:onClick="startLessonListActivity"
         android:src="@drawable/noun_project_907_2" />
 
 </LinearLayout>
