@@ -1,7 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/linearLayout1"
     android:layout_width="fill_parent"
-    android:layout_height="16pt" >
+    android:layout_height="60dp" >
 
     <TextView
         android:id="@+id/tvKanji"
@@ -16,7 +16,8 @@
         android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:orientation="vertical" android:layout_weight="10">
+        android:layout_weight="10"
+        android:orientation="vertical" >
 
         <TextView
             android:id="@+id/tvKana"
@@ -34,7 +35,6 @@
             android:lines="2"
             android:text="Large Text"
             android:textAppearance="?android:attr/textAppearanceSmall" />
-
     </LinearLayout>
 
     <Button
@@ -43,7 +43,6 @@
         android:layout_height="wrap_content"
         android:layout_weight="5"
         android:text="\u25B7"
-        android:visibility="gone"
-        />
+        android:visibility="gone" />
 
 </LinearLayout>
